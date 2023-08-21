@@ -13,9 +13,10 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Felipe Gonçalves Sobrinho
 * Geovanne Marco Correa Da Silva
 * Gabriel Costa De Cerqueira Bispo
-* Rafael Batista
+* Rafael Batista da Silva Cordeiro
 * Fernando de Araújo Abreu
 * Cláudio Lopes Coelho Barroso
+* Joao Marcos Macedo Goncalves
 
 ## Orientador
 
