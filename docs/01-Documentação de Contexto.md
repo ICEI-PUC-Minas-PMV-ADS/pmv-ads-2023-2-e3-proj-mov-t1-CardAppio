@@ -16,21 +16,17 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+O objetivo geral do trabalho é desenvolver uma aplicação mobile que permita a realização de pedidos pelo cliente, no local do estabelecimento do ramo alimentício que fará o pedido, conforme o cardápio do estabelecimento.
+Os objetivos específicos são:
+- entender a necessidade dos estabelecimentos alimentícios com relação a este aplicativo de pedidos;
+- desenvolver funcionalidades compatíveis com esta necessidade dos estabelecimentos alimentícios;
+- testar as funcionalidades criadas para validação da aplicação.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A concorrência no ramo alimentício de empresas que atendem o consumidor final como hamburguerias, pizzarias, lanchonetes, entre outras, é intensa. Assim, a inovação tem que ser constante nestas empresas para se manterem no mercado. Oferecer ao cliente a oportunidade de fazer o pedido escolhido no cardápio de forma digital, agiliza o atendimento e reduz a possibilidade de erros no registro de pedidos pelo garçom/atendente. Da perspectiva dos custos da empresa, esta aplicação mobile permite uma redução de custos das empresas de alimento deste ramo com relação ao número de garçom/atendentes contratados, redução nos erros de registro de pedidos e otmização do tempo de recebimento dos pedidos e preparo dos alimentos. Esta redução de custos aumenta a competitividade destas empresas no cenário atual de pressão de margens de lucratividade. 
+Desta forma, a aplicação mobile proposta apresenta-se como uma solução de negócio muito atrativa para estes estabelecimentos alimentícios, tanto como agregando valor para o cliente quanto em redução de custo para o negócio. Com isso as empresas do ramo alimentício terão um significativo diferencial competitivo no mercado que atuam.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
