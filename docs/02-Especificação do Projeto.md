@@ -161,4 +161,8 @@ Conforme a figura a seguir definimos o gerenciamento de tempo e equipe para o pr
 
 O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
 
-![Orçamento](img/02-orcamento.png)
+Conforme a figura a seguir está definidio o orçamento necessário para o desenvolvimento do projeto:
+
+![Gestão de Projetos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-projeto-pedidos/assets/63524496/b65c1f28-de04-4e41-a300-a6214bd1306b)
+
+
