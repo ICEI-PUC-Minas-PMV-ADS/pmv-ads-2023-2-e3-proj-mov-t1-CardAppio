@@ -2,34 +2,67 @@
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
-
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+<b>Persona 1: Chef Carlos</b>
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+Função: Chefe de Cozinha <br>
+Descrição: Carlos é um chef experiente e apaixonado pela culinária. Ele é responsável por supervisionar a cozinha, criar novos pratos e garantir a qualidade dos alimentos. Sua rotina é agitada e ele está sempre em busca de maneiras de otimizar o processo de preparação de alimentos. <br>
+Necessidades e Metas:
+Receber pedidos claros e detalhados da cozinha.
+Acesso rápido a pedidos antigos para referência.
+Notificações em tempo real sobre pedidos urgentes ou alterações.
+Interface intuitiva para atualizar o status dos pratos.
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+<b>Persona 2: Garçonete Ana</b>
+
+Função: Atendente de Garçom<br>
+Descrição: Ana é uma atendente amigável e eficiente. Ela interage diretamente com os clientes, anota os pedidos e garante que a experiência de jantar seja agradável. Ela lida com vários pedidos ao mesmo tempo, enquanto mantém um bom atendimento ao cliente.<br>
+Necessidades e Metas:
+Receber notificações imediatas sobre novos pedidos ou alterações.
+Acessar informações detalhadas sobre os pratos (ingredientes, alergias etc.).
+Rápido registro de pedidos e atualizações em tempo real.
+Comunicar-se facilmente com a cozinha para feedback ou correções.
+
+<b>Persona 3: Gerente Gabriela</b>
+
+Função: Gerente do Restaurante<br>
+Descrição: Gabriela é responsável pela operação geral do restaurante. Ela supervisiona a equipe, monitora o desempenho e toma decisões estratégicas para melhorar a eficiência e a experiência do cliente. Ela precisa de informações claras para tomar decisões informadas.<br>
+Necessidades e Metas:
+Painel de controle com métricas de desempenho da equipe e do restaurante.
+Acesso a relatórios de vendas, horários de pico e pratos mais populares.
+Capacidade de ajustar o fluxo de pedidos com base na demanda.
+Monitorar o status das mesas, pedidos e tempos de espera.
+
+<b>Persona 4: Cliente Lucas</b>
+
+Função: Cliente Regular<br>
+Descrição: Lucas é um cliente frequente do restaurante. Ele valoriza a eficiência no atendimento e a qualidade dos alimentos. Gosta de fazer pedidos personalizados e prefere a comodidade de um serviço rápido e preciso.<br>
+Necessidades e Metas:
+Menu digital intuitivo e fácil de navegar.
+Opções para personalizar pedidos e fazer solicitações especiais.
+Receber atualizações sobre o status do pedido e tempo estimado.
+Possibilidade de fornecer feedback sobre a experiência.
 
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE`      |PARA ... `MOTIVO/VALOR`                         |
+|--------------------|------------------------------------     |----------------------------------------        |
+|Usuário do sistema  | visualizar o cardápio                   | fazer o pedido                                 |
+|Usuário do sistema  | selecionar ingredientes/tamanhos/opções | experiência personalizada                      |
+|Usuário do sistema  | chamar garçom na mesa                   | tirar alguma dúvida ou alterar pedido          |
+|Usuário do sistema  | avaliar o pedido                        | dar feedback ao restaurante                    | 
+|Garçom              | acompanhar o status dos pedidos         | levar pedidos até as mesas                     |
+|Garçom              | receber aviso de qual mesa solicitou    | ir até a mesa e atender o cliente pessoalmente |
+|Administrador       | alterar permissões                      | Permitir que possam administrar contas         |
+|Administrador       | alterar prazos e itens do cardápio      | personalizar de acordo com o estabelecimento   |
+|Cozinheiro          | visualizar a fila de pedidos            | planejar a preparação dos pedidos              |
+|Cozinheiro          | alterar o status dos pedidos            | ter controle visual dos pedidos (quadro kanbam)|
+|Cozinheiro          | visualizar a receita (ficha técnica)    | manter o padrão de qualidade da comida         |
+
+
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
