@@ -10,7 +10,7 @@ Função: Chefe de Cozinha <br>
 Descrição: Carlos é um chef experiente e apaixonado pela culinária. Ele é responsável por supervisionar a cozinha, criar novos pratos e garantir a qualidade dos alimentos. Sua rotina é agitada e ele está sempre em busca de maneiras de otimizar o processo de preparação de alimentos. <br>
 Necessidades e Metas:
 Receber pedidos claros e detalhados da cozinha.
-Acesso rápido a pedidos antigos para referência.
+Acesso rápido ao registro de pedidos para referência.
 Notificações em tempo real sobre pedidos urgentes ou alterações.
 Interface intuitiva para atualizar o status dos pratos.
 
@@ -27,7 +27,7 @@ Comunicar-se facilmente com a cozinha para feedback ou correções.
 <b>Persona 3: Gerente Gabriela</b>
 
 Função: Gerente do Restaurante<br>
-Descrição: Gabriela é responsável pela operação geral do restaurante. Ela supervisiona a equipe, monitora o desempenho e toma decisões estratégicas para melhorar a eficiência e a experiência do cliente. Ela precisa de informações claras para tomar decisões informadas.<br>
+Descrição: Gabriela é responsável pela operação geral do restaurante. Ela supervisiona a equipe, monitora o desempenho e toma decisões estratégicas para melhorar a eficiência e a experiência do cliente. Ela precisa de informações claras para tomar decisões embasadas.<br>
 Necessidades e Metas:
 Painel de controle com métricas de desempenho da equipe e do restaurante.
 Acesso a relatórios de vendas, horários de pico e pratos mais populares.
@@ -46,21 +46,21 @@ Possibilidade de fornecer feedback sobre a experiência.
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE`      |PARA ... `MOTIVO/VALOR`                         |
 |--------------------|------------------------------------     |----------------------------------------        |
-|Usuário do sistema  | visualizar o cardápio                   | fazer o pedido                                 |
-|Usuário do sistema  | selecionar ingredientes/tamanhos/opções | experiência personalizada                      |
-|Usuário do sistema  | chamar garçom na mesa                   | tirar alguma dúvida ou alterar pedido          |
-|Usuário do sistema  | avaliar o pedido                        | dar feedback ao restaurante                    | 
+|Cliente             | visualizar o cardápio                   | fazer o pedido                                 |
+|Cliente             | selecionar ingredientes/tamanhos/opções | experiência personalizada                      |
+|Cliente             | chamar garçom na mesa                   | tirar alguma dúvida ou alterar pedido          |
+|Cliente             | avaliar o pedido                        | dar feedback ao restaurante                    | 
 |Garçom              | acompanhar o status dos pedidos         | levar pedidos até as mesas                     |
-|Garçom              | receber aviso de qual mesa solicitou    | ir até a mesa e atender o cliente pessoalmente |
+|Garçom              | receber aviso de qual mesa o solicitou  | ir até a mesa e atender o cliente pessoalmente |
 |Administrador       | alterar permissões                      | Permitir que possam administrar contas         |
 |Administrador       | alterar prazos e itens do cardápio      | personalizar de acordo com o estabelecimento   |
-|Cozinheiro          | visualizar a fila de pedidos            | planejar a preparação dos pedidos              |
-|Cozinheiro          | alterar o status dos pedidos            | ter controle visual dos pedidos (quadro kanbam)|
-|Cozinheiro          | visualizar a receita (ficha técnica)    | manter o padrão de qualidade da comida         |
+|Equipe da Cozinha   | visualizar a fila de pedidos            | planejar a preparação dos pedidos              |
+|Equipe da Cozinha   | alterar o status dos pedidos            | ter controle visual dos pedidos (quadro kanbam)|
+|Equipe da Cozinha   | visualizar a receita (ficha técnica)    | manter o padrão de qualidade da comida         |
 
 
 
