@@ -3,16 +3,12 @@
 Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Quem não gosta de sair para jantar ou até mesmo fazer um happy hour com os amigos após o trabalho e tomar aquele drink, não é mesmo?
+Bares e restaurantes costumam utilizar sistema de comandas ou até mesmo uma prancheta onde o garçom vai até a mesa após ser solicitado por um cliente e anota o pedido no ato da requisição.
+Frequentemente, clientes são surpreendidos com um erro na anotação de seus pedidos ou até mesmo um erro ao entregar o produto na mesa certa, o que ocasiona em maior espera até outro pedido ser preparado, gerando insatisfação dos clientes.
+Os donos de bares e restaurantes devem se preocupar sempre em ter a quantidade de garçom ideal para a demanda de clientes daquele dia, visto que no começo do mês, datas comemorativas e aos finais de semana, a demanda sobe bastante, e nos dias comuns como segunda a quinta feira, esse numero de clientes pode cair drasticamente. Assim os empresários costumam ter problemas para contratar vários funcionários, tendo que procurar alguém que esteja disponível para trabalhar naquela data em especifico, gerando assim um custo altamente variável e incerto para seu negócio. Com isso, o empresário corre o risco de contratar pessoas que não estão devidamente capacitadas para o serviço, podendo gerar prejuízos para a empresa. Aliás, quem nunca foi a um restaurante e teve o pedido anotado errado, e teve que esperar um tempo consideravelmente alto até que o pedido certo fosse entregue a mesa. Dependendo do quão demorado for o pedido o cliente pode ter outro compromisso e acabar indo embora sem a sua refeição. Assim gerando prejuízo pro estabelecimento e uma insatisfação enorme do cliente. 
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
