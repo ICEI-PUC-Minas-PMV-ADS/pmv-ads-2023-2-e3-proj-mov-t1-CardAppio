@@ -149,7 +149,7 @@ A matriz deve contemplar todos os elementos relevantes que fazem parte do sistem
 
 De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
 
-## Gerenciamento de Tempo e Gerenciamento de Equipe
+## Gerenciamento de Tempo
 
 Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
 
@@ -157,11 +157,17 @@ Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o ger
 
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
+Conforme a figura a seguir definimos o gerenciamento de tempo para o projeto:
+
+![Diagrama de Gantt](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/63524496/975bb488-88a7-417f-bade-f040d6fee104)
+
+## Gerenciamento de Equipe
+
 O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados.
 
-Conforme a figura a seguir definimos o gerenciamento de tempo e equipe para o projeto:
+Confrome a figura a seguir demonstra o gerenciamento da equipe para o projeto:
 
-![Diagrama de Gantt](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-projeto-pedidos/assets/63524496/e7cfeb7a-a806-4065-83de-a4799a7b8195)
+
 
 ## Gestão de Orçamento
 
