@@ -1,4 +1,6 @@
-# TÍTULO DO PROJETO
+# CardAppio
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-projeto-pedidos/assets/63524496/5c626eef-e05a-4ec7-8c94-612eefb85974" alt="LogoTipo CardAppio" width="300px"/> 
+
 
 `Tecnologia em Análise e Desenvolvimento de Sistema`
 
@@ -6,7 +8,7 @@
 
 `Eixo 3`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo geral do trabalho é desenvolver uma aplicação mobile que permita a realização de pedidos pelo cliente, no local do estabelecimento do ramo alimentício que fará o pedido, conforme o cardápio do estabelecimento.
 
 ## Integrantes
 
