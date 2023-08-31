@@ -134,7 +134,7 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 Confrome a figura a seguir demonstra o gerenciamento da equipe para o projeto:
 
-
+![Gerenciamento de Equipe Quadro](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/63524496/924a2453-4bdd-47f6-9fb7-2055449e8482)
 
 ## Gestão de Orçamento
 
