@@ -1,7 +1,5 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
 ## Personas
 
 <b>Persona 1: Chef Carlos</b>
@@ -105,7 +103,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-01| A aplicação deve disponibilizar o cardápio do estabelecimento | ALTA | 
 |RF-02| A aplicação deve disponibilizar filtros de pesquisa do cardápio para o cliente   | BAIXO |
-|RF-03| A aplicação deve permitir que o cliente selecione, conclua  | ALTA |
+|RF-03| A aplicação deve permitir que o cliente selecione e conclua o pedido  | ALTA |
 |RF-04| A aplicação deve permitir que o cliente acompanhe o estado pedido  | MEDIA |
 |RF-05| A aplicação deve permitir que o cliente altere ou cancele o pedido por um tempo determinado pelo estabelecimento | ALTA |
 |RF-06| A aplicação deve permitir que a cozinha do estabelecimento receba e ordene os pedidos. | ALTA |
@@ -145,13 +143,7 @@ A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualizaç
 
 A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
 
-![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
-
-> **Links Úteis**:
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
-
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/63524496/cfe49b1b-3fee-4a87-9736-963b8c89baa9)
 
 # Gerenciamento de Projeto
 
