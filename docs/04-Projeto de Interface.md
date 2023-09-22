@@ -22,3 +22,5 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
+![Wireframes](img/wireframes.png)
+
