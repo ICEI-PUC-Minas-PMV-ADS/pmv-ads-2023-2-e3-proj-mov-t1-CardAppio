@@ -148,5 +148,5 @@ Conforme a figura a seguir está definidio o orçamento necessário para o desen
 
 Definimos alguns infdicadores, para monitorar e avalivar se nossa ferramenta es desempenhando bem o seu papel
 
-![Indicadores de Desempenho](img/indicadoresdedesempenho)
+![Indicadores de Desempenho](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/blob/main/docs/img/indicadores%20de%20desempenho.png)
 
