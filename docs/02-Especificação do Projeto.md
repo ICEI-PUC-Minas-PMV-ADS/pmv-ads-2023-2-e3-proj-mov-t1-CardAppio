@@ -144,4 +144,6 @@ Conforme a figura a seguir está definidio o orçamento necessário para o desen
 
 ![Gestão de Projetos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-projeto-pedidos/assets/63524496/b65c1f28-de04-4e41-a300-a6214bd1306b)
 
+## Indicadores de Desempenho
+
 
