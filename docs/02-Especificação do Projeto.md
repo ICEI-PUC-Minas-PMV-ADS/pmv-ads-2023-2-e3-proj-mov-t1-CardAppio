@@ -148,5 +148,5 @@ Conforme a figura a seguir está definidio o orçamento necessário para o desen
 
 Definimos alguns infdicadores, para monitorar e avalivar se nossa ferramenta es desempenhando bem o seu papel
 
-![Indicadores de Desempenho](im)
+![Indicadores de Desempenho](img.indicadoresdedesempenho.png)
 
