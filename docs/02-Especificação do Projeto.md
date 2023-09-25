@@ -60,6 +60,28 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 |Equipe da Cozinha   | alterar o status dos pedidos            | ter controle visual dos pedidos (quadro kanbam)|
 |Equipe da Cozinha   | visualizar a receita (ficha técnica)    | manter o padrão de qualidade da comida         |
 
+
+## Modelagem do Processo de Negócio 
+
+### Análise da Situação Atual
+
+Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+
+### Descrição Geral da Proposta
+
+O sistema busca reduzir a quantidade de colaboradores que tem contato direto com o cliente, algumas tarefas que seriam feitas por parte dos colaboradores, são delegadas para o cliente através da criação desse sistema. Percebe-se que a interação ocorre entre, cliente, administrador, e colaboradores, sendo a maior parte das ações, feitas pelo cliente
+
+### Processo 1 – Sistema Padrão
+
+Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+
+![Processo 1](img/02-bpmn-proc1.png)
+
+### Processo 2 – Sistema CardAppio
+
+![Diagrama-Final](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/24a66b58-eab6-4a1a-8e7d-5f77fd95f6cb)
+
+
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
