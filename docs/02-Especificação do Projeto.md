@@ -79,7 +79,7 @@ Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em segu
 
 ### Processo 2 – Sistema CardAppio
 
-![Diagrama-Final](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/24a66b58-eab6-4a1a-8e7d-5f77fd95f6cb)
+![diagram-_1_](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/e5ab634c-17ff-41bc-942e-8a3d2fb8d884)
 
 
 ## Requisitos
