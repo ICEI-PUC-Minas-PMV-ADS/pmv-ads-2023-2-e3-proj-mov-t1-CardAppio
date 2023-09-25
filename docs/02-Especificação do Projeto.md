@@ -65,7 +65,7 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Atualmente estabelecimentos do tipo, bares e restaurantes, costumam ter problemas com excesso de garçons disponiveis em dias de baixa demanda e uma falta de garçons em dias de alta demanda, essa falta de controle dos colaboradores, acabam prejudicando tanto o cliente, quanto o empreeendedor. O cliente é prejudicado através da espera do pedido e o empresário através do gasto fixo mensal com colaboradores. Normalmente esses lugares focam em ter uma maior quantidade de garçons, assim tendo uma baixa produção na cozinha e como o serviço desde o atendimento até a preparação do pedido e feito de forma manual, é provavel que ocorra erros nas preparações do pedidos por causa da forma como eles foram anotados.
+Atualmente estabelecimentos do tipo, bares e restaurantes, costumam ter problemas com excesso de garçons disponiveis em dias de baixa demanda e uma falta de garçons em dias de alta demanda, essa falta de controle dos colaboradores, acabam prejudicando tanto o cliente, quanto o empreeendedor. O cliente é prejudicado através da espera do pedido e o empresário através do gasto fixo mensal com colaboradores. Normalmente esses lugares focam em ter uma maior quantidade de garçons, assim tendo uma baixa produção na cozinha, e como o serviço desde o atendimento até a preparação do pedido é feito de forma manual, é provavel que ocorra erros nas preparações do pedidos por causa da forma como eles foram anotados.
 
 ### Descrição Geral da Proposta
 
@@ -74,8 +74,8 @@ Algumas tarefas que seriam feitas por parte dos colaboradores, são delegadas pa
 
 ### Processo 1 – Sistema Padrão
 
-
 ![Diagrama-sem-sistema](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/8ea2935b-ee97-4a21-ba0d-c4a86fc23c4a)
+
 
 ### Processo 2 – Sistema CardAppio
 
