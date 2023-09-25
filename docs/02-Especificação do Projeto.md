@@ -65,15 +65,15 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Atualmente estabelecimentos do tipo, bares e restaurantes, costumam ter problemas com excesso de garçons disponiveis em dias de baixa demanda e uma falta de garçons em dias de alta demanda, essa falta de controle dos colaboradores, acabam prejudicando tanto o cliente, quanto o empreeendedor. O cliente é prejudicado através da espera do pedido e o empresário através do gasto fixo mensal com colaboradores. Normalmente esses lugares focam em ter uma maior quantidade de garçons, assim tendo uma baixa produção na cozinha e como o serviço desde o atendimento até a preparação do pedido e feito de forma manual, é provavel que ocorra erros nas preparações do pedidos por causa da forma como eles foram anotados.
 
 ### Descrição Geral da Proposta
 
-O sistema busca reduzir a quantidade de colaboradores que tem contato direto com o cliente, algumas tarefas que seriam feitas por parte dos colaboradores, são delegadas para o cliente através da criação desse sistema. Percebe-se que a interação ocorre entre, cliente, administrador, e colaboradores, sendo a maior parte das ações, feitas pelo cliente
+O sistema busca reduzir a quantidade de colaboradores que tem contato direto com o cliente e minimizar as chances de erro, assim evitando insatisfação do cliente e gastos desnecessarios por parte do empreendedor.
+Algumas tarefas que seriam feitas por parte dos colaboradores, são delegadas para o cliente através da criação desse sistema. Percebe-se que a interação ocorre entre, cliente, administrador, e colaboradores, sendo a maior parte das ações, feitas pelo cliente.
 
 ### Processo 1 – Sistema Padrão
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
 ![Diagrama-sem-sistema](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/8ea2935b-ee97-4a21-ba0d-c4a86fc23c4a)
 
