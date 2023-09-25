@@ -75,7 +75,7 @@ O sistema busca reduzir a quantidade de colaboradores que tem contato direto com
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
-![Processo 1](img/02-bpmn-proc1.png)
+![Diagrama-sem-sistema](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/8ea2935b-ee97-4a21-ba0d-c4a86fc23c4a)
 
 ### Processo 2 – Sistema CardAppio
 
