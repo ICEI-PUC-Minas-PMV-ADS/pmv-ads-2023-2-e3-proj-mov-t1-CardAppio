@@ -13,3 +13,19 @@ Para cada requisito funcional, pode ser entregue um artefato desse tipo
 > - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
 > - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
 > - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+
+## Tela Favoritos
+
+Sendo desenvolvida por Cláudio Lopes Coelho Barroso.
+Iniciei os estudos do Micro Fundamento de Desenvolvimento de Aplicações Móveis na Segunda feira 09/10/23. 
+Foi finalizado toda a unidade 1 juntamente com a execução de todos os passos dados pelo professor. Segue algumas evidências:
+
+![conhecendo o react native paper e suas possibilidade na criação de intefaces](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/115187389/af48d164-33ba-4bcc-aab8-e8fa837e545f)
+Conhecendo o react native paper e suas possibilidade na criação de intefaces.
+
+![aprendendo sobre o componente contexto](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/115187389/eda0f6df-7d83-4b30-a393-efca07f5fd84)
+Aprendendo sobre o componente contexto.
+
+![App_js e o exercicio final da unidade 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/115187389/12b23d30-11f0-4a90-b135-2f2f1620de1b)
+A aplicação principal App.js no ambiente de desenvolvimento snack.expo.dev e o exercicio final da unidade 1.
+
