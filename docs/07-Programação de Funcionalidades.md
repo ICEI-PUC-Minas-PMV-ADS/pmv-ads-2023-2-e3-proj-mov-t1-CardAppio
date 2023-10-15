@@ -57,6 +57,12 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppi
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/63524496/c2fcd4f6-78c9-4234-9ab2-f2b59a334d71
 
+## Tela Carrinho
+
+Sendo desenvolvida por João Marcos Macedo. <br/> 
+Estou finalizando os estudos da Unidade 1 do Microfundamento de Desenvolvimento de Aplicações Móveis. Estou sendo introduzindo ao Expo e estudando as funcionalidades da plataforma. Tela do aplicativo bem no ínicio do desenvolvimento.  <br/>
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/blob/main/docs/img/telacarrinho1.jpg?raw=true)
 
 
 
