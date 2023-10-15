@@ -40,4 +40,4 @@ A aplicação principal App.js no ambiente de desenvolvimento snack.expo.dev e o
 ## Tela Menu
 Desenvolvimento por Gabriel Costa de Cerqueira Bispo.
 Iniciei o estudo do Micro Fundamento - Desenvolvimento de Aplicações Móveis no início dessa etapa e executei o passo a passo junto com o professor, buscando referências e complementações na documentação do react. No momento estou na Unidade 2, conhecendo as principais características dos mecanismos de navegação e criação de rotas no react native.
-![image](.img/pgfuncionalidadesgc.png)
+![image](img/pgfuncionalidadesgc.png)
