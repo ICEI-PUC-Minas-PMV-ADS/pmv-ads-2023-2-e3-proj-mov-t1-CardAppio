@@ -29,3 +29,10 @@ Aprendendo sobre o componente contexto.
 ![App_js e o exercicio final da unidade 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/115187389/12b23d30-11f0-4a90-b135-2f2f1620de1b)
 A aplicação principal App.js no ambiente de desenvolvimento snack.expo.dev e o exercicio final da unidade 1.
 
+## Tela Inicial
+Sendo desenvolvida por Fernando de Araújo Abreu.
+Iniciei os estudos do Micro Fundamento de Desenvolvimento de Aplicações Móveis na Terça-feira 10/10/23. 
+Foi finalizado toda a unidade 1 juntamente com a execução de todos os passos dados pelo professor. Segue algumas evidências:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114960971/272b80e6-8d99-4844-87cb-5bf081b1214a)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114960971/8615a95e-c3d6-4139-80ca-2713a24478af)
+A aplicação principal App.js no ambiente de desenvolvimento snack.expo.dev e o exercicio final da unidade 1.
