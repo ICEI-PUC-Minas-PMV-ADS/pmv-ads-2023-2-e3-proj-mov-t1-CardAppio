@@ -74,3 +74,25 @@ Apos estudo da Unidade 1 Do Microfundamento de Desenvolvimento de Aplicações M
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/blob/main/docs/img/Configura%C3%A7%C3%A3o%20do%20ambiente.png)
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/blob/main/docs/img/Faculdade%202.png)
+
+
+## Tela Produtos
+Sendo desenvolvida por Geovanne Marco Correa. <br/>
+Estudos sobre React Native iniciados no dia 10/10/2023 com foco nos fundamentos do React para maior consolidação da base de aprendizados.
+Tive um pouco de dificuldade para assimilar alguns componentes do React pois minha base em JS não estava tão boa, algo que me fez voltar a rever alguns conteúdos de JS e praticar um pouco.
+Estou utilizando vídeo aulas no youtube por ter maior afinidade com aprendizado em vídeos, assim consumindo alguns conteúdos alternativos em relação ao dos micros fundamentos da Etapa 3.
+Devo confessar que a parte de editar o codigo e rodar a aplicação está sendo um pouco complicada, acredito que o problema é a minha falta de familiarização com as etapas.
+
+![Aprendendo React 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/77286b06-e177-4380-b274-778304bd4548)
+
+![Teste no navegador ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/b7fb7723-2d81-4a29-afc9-012c5e7fb73d)
+
+![Inicio Criação Tela Produtos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/4f272309-e194-45a7-9b9c-3fc55568e720)
+
+![Video aula ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/b416f8c9-9db7-4796-9228-18151442144c)
+
+![App rodando](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/6a21e39a-1303-428b-b849-2c676ab86456)
+
+
+
+
