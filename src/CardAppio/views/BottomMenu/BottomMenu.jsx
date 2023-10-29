@@ -1,30 +1,27 @@
 import {useState} from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
-import COLORS from '../constants/colors'
 
-const HomeRoute = () => <Text>Home</Text>;
+import COLORS from '../../constants/colors'
+import Menu from '../../views/Menu/Menu';
+import Home from '../../views/Home/Home';
+import Cart from '../../views/Carrinho/Carrinho';
+import Favoritos from '../../views/Favoritos/Favoritos';
 
-const MenuRoute = () => <Text>Menu</Text>;
-
-const CartRoute = () => <Text>Carrinho</Text>;
-
-const FavRoute = () => <Text>Favoritos</Text>;
-
-const Footer = () => {
+const BottomMenu = () => {
     const [index, setIndex] = useState(0);
   
     const [routes] = useState([
         { key: 'home', title: 'Home', icon: 'home' },
-        { key: 'menu', title: 'Menu', icon: 'silverware-fork-knife' },
+        { key: 'menu', title: 'Menu', icon:  'silverware-fork-knife' },
         { key: 'cart', title: 'Carrinho', icon: 'cart' },
         { key: 'favoritos', title: 'Favoritos', icon: 'heart' },
     ]);
 
     const renderScene = BottomNavigation.SceneMap({
-        home: HomeRoute,
-        menu: MenuRoute,
-        cart: CartRoute,
-        favoritos: FavRoute,
+        home: Home,
+        menu: Menu,
+        cart: Cart,
+        favoritos: Favoritos,
     });
 
   return (
@@ -37,4 +34,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export default BottomMenu;

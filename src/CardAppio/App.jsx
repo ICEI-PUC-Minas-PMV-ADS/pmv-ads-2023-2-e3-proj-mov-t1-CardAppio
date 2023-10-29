@@ -1,8 +1,7 @@
-import Home from './views/Home/Home';
-
+import BottomMenu from './views/BottomMenu/BottomMenu'
 export default function App() {
   return (
-    <Home />
+    <BottomMenu />
   );
 }
 
