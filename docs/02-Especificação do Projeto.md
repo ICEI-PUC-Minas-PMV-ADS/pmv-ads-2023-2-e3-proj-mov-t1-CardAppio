@@ -60,6 +60,28 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 |Equipe da Cozinha   | alterar o status dos pedidos            | ter controle visual dos pedidos (quadro kanbam)|
 |Equipe da Cozinha   | visualizar a receita (ficha técnica)    | manter o padrão de qualidade da comida         |
 
+
+## Modelagem do Processo de Negócio 
+
+### Análise da Situação Atual
+
+Atualmente estabelecimentos do tipo, bares e restaurantes, costumam ter problemas com excesso de garçons disponiveis em dias de baixa demanda e uma falta de garçons em dias de alta demanda, essa falta de controle dos colaboradores, acabam prejudicando tanto o cliente, quanto o empreeendedor. O cliente é prejudicado através da espera do pedido e o empresário através do gasto fixo mensal com colaboradores. Normalmente esses lugares focam em ter uma maior quantidade de garçons, assim tendo uma baixa produção na cozinha, e como o serviço desde o atendimento até a preparação do pedido é feito de forma manual, é provavel que ocorra erros nas preparações do pedidos por causa da forma como eles foram anotados.
+
+### Descrição Geral da Proposta
+
+O sistema busca reduzir a quantidade de colaboradores que tem contato direto com o cliente e minimizar as chances de erro, assim evitando insatisfação do cliente e gastos desnecessarios por parte do empreendedor.
+Algumas tarefas que seriam feitas por parte dos colaboradores, são delegadas para o cliente através da criação desse sistema. Percebe-se que a interação ocorre entre, cliente, administrador, e colaboradores, sendo a maior parte das ações, feitas pelo cliente.
+
+### Processo 1 – Sistema Padrão
+
+![Diagrama-sem-sistema](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/8ea2935b-ee97-4a21-ba0d-c4a86fc23c4a)
+
+
+### Processo 2 – Sistema CardAppio
+
+![diagram-_1_](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/e5ab634c-17ff-41bc-942e-8a3d2fb8d884)
+
+
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
@@ -144,4 +166,9 @@ Conforme a figura a seguir está definidio o orçamento necessário para o desen
 
 ![Gestão de Projetos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-projeto-pedidos/assets/63524496/b65c1f28-de04-4e41-a300-a6214bd1306b)
 
+## Indicadores de Desempenho
+
+Definimos alguns infdicadores, para monitorar e avalivar se nossa ferramenta es desempenhando bem o seu papel
+
+![Indicadores de Desempenho](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/blob/main/docs/img/indicadores%20de%20desempenho.png)
 
