@@ -1,7 +1,7 @@
-import BottomMenu from './views/BottomMenu/BottomMenu'
+import Menu from './views/BottomMenu/BottomMenu'
 export default function App() {
   return (
-    <BottomMenu />
+    <Menu />
   );
 }
 

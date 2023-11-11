@@ -1,8 +1,9 @@
-import { View, FlatList, Text, StyleSheet, Image } from 'react-native';
+import { View, FlatList, StyleSheet, Image, ScrollView } from 'react-native';
 
-import Header from '../../components/Header/Header'
-import Container from '../../components/Container/Containers'
-import Body from '../../components/Body/Body'
+import Header from '../../components/Header/Header';
+import Body from '../../components/Body/Body';
+import { Appbar, Text } from 'react-native-paper';
+import COLORS from '../../constants/colors';
 
 const menuItems = [
   {
@@ -10,22 +11,26 @@ const menuItems = [
     name: 'Item 1',
     description: 'Uma breve descrição do Item 1',
     price: 'R$ 10.99',
-   // image:
+    imageURL: 'https://img.freepik.com/fotos-gratis/hamburguer-isolado-no-fundo-branco-fastfood-de-hamburguer-fresco-com-carne-e-queijo_90220-1329.jpg'
   },
 ];
 
 const MenuList = () => {
   return (
-    <Container>
-    
-      <Header />
+    <ScrollView style={{ backgroundColor: COLORS.black }}>
+      <Header>
+        <Appbar.Action icon="menu" onPress={() => { }} />
+        <Appbar.Content titleStyle={{ fontSize: 24, fontWeight: 'bold' }} title="CardAppio" onPress={() => { }} />
+        <Appbar.Action icon="account" onPress={() => { }} />
+      </Header>
+
       <Body>
         <FlatList
           data={menuItems}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <View style={styles.itemContainer}>
-              <Image source={item.image} style={styles.image} />
+              <Image source={item.imageURL} style={styles.image} />
               <View style={styles.itemDetails}>
                 <Text style={styles.name}>{item.name}</Text>
                 <Text style={styles.description}>{item.description}</Text>
@@ -35,8 +40,7 @@ const MenuList = () => {
           )}
         />
       </Body>
-
-    </Container>
+    </ScrollView>
   );
 };
 
@@ -46,6 +50,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
     padding: 10,
+  },
+  Container: {
+    flex: 1,
   },
   image: {
     width: 50,
@@ -58,8 +65,10 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: 'white',
   },
   description: {
+    color: 'white',
     fontSize: 14,
   },
   price: {

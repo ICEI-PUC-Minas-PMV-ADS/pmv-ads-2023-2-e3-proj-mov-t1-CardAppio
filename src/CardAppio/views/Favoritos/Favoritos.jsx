@@ -1,5 +1,5 @@
-import { Appbar, Text, Button } from 'react-native-paper';
-import { FlatList, Image, ScrollView, StyleSheet, View, } from 'react-native';
+import { Appbar } from 'react-native-paper';
+import { ScrollView, StyleSheet, View, } from 'react-native';
 
 import Header from '../../components/Header/Header'
 import COLORS from '../../constants/colors';
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.black,
     },
 
-  
+
 })
 
 
