@@ -37,6 +37,15 @@ Foi finalizado toda a unidade 1 juntamente com a execução de todos os passos d
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114960971/8615a95e-c3d6-4139-80ca-2713a24478af)
 A aplicação principal App.js no ambiente de desenvolvimento snack.expo.dev e o exercicio final da unidade 1.
 
+Continuando os estudos do Microfundamento de Desenvolvimento de Aplicações móveis realizei os estudos da Unidade 2, Tema 1 Interfaces, conforme evidências abaixo. Com os estudos realizados neste microfundamento já foi possível fazer a tela inicial, postada na estapa IV do projeto.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114960971/ab22876c-cc66-4c1d-a62b-471f1454e1fb)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114960971/3b18da1f-671e-4b5b-b8e5-ce8b726e481a)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114960971/71748c37-6142-48b9-9d8e-8b72126f9eaa)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114960971/419d9e35-05f0-4e0d-9c89-ac8bf675f12e)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114960971/82f4a5d6-6763-4f88-81bb-8e100d0a3d7a)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114960971/4579bb62-8769-43a9-baf5-2a378b2bb3a9)
+
+
 ## Tela Menu
 Desenvolvimento por Gabriel Costa de Cerqueira Bispo.<br/>
 Iniciei o estudo do Micro Fundamento - Desenvolvimento de Aplicações Móveis no início dessa etapa e executei o passo a passo junto com o professor, buscando referências e complementações na documentação do react. No momento estou na Unidade 2, conhecendo as principais características dos mecanismos de navegação e criação de rotas no react native.<br/>
