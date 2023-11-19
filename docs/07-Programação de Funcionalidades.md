@@ -86,7 +86,7 @@ Apos estudo da Unidade 1 Do Microfundamento de Desenvolvimento de Aplicações M
 
 Dando continuidade aos estudos do microfundamento desenvolvimento de aplicações móveis, o plofessor Kleber os esninou a desenvolver uma calculadora, e com os ensinamentos do professor foi possivel iniciar o desenvolvimento das telas de login e cadastro.  
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/blob/main/docs/img/Faculdade%202.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/blob/main/docs/img/Calculadora.png)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/blob/main/docs/img/Faculdade%202.png)
 
 
