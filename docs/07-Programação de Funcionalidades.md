@@ -98,15 +98,16 @@ O desenvolvimento da minha tela ainda não está completo, devo confessar que me
 
 
 Nesta gravação de tela, podemos observar o projeto rodando no Expo Go, a maior parte das funcionalidades, não está disponivel ainda, porém já da pra ter uma noção do buscamos com o projeto.
+
 O video foi gravado em um celular Samsung S22.
-https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/75f84d9b-29ad-4f58-820f-98de3debd03e
+
+![mp4}https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/75f84d9b-29ad-4f58-820f-98de3debd03e
 
 
 Nesta captura de tela, podemos observar algumas funções utilizadas nesta tela do projeto.
 ![Print VS ABERTO](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/3052ff25-2eb2-4ff1-bf03-6e749ed0ac9e)
 
-Aqui podemos ver um pouco da responsividade em dispositivos IOS, já que a resolução da tela não é a mesma em ambos dispositivos, não está perfeito, porém para uma versão inicial, acredito que foi um bom avanço.
-![Foto IOS](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/acd29425-fd38-4879-8e49-ce505cd25b5d)
+
 
 
 
