@@ -93,20 +93,21 @@ Dando continuidade aos estudos do microfundamento desenvolvimento de aplicaçõe
 
 ## Tela Produtos
 Sendo desenvolvida por Geovanne Marco Correa. <br/>
-Estudos sobre React Native iniciados no dia 10/10/2023 com foco nos fundamentos do React para maior consolidação da base de aprendizados.
-Tive um pouco de dificuldade para assimilar alguns componentes do React pois minha base em JS não estava tão boa, algo que me fez voltar a rever alguns conteúdos de JS e praticar um pouco.
-Estou utilizando vídeo aulas no youtube por ter maior afinidade com aprendizado em vídeos, assim consumindo alguns conteúdos alternativos em relação ao dos micros fundamentos da Etapa 3.
-Devo confessar que a parte de editar o codigo e rodar a aplicação está sendo um pouco complicada, acredito que o problema é a minha falta de familiarização com as etapas.
+Tive um pouco de dificuldade no inicio do desenvolvimento por que minha base de conhecimentos em Java Script era bem restrita. Me aprimorei bastante na linguagem, e ao utilizar o React Native eu tive uma maior facilidade pois conseguir assimilar rapidamente o que eu tinha estudado com o desenvolvimento em prática.
+O desenvolvimento da minha tela ainda não está completo, devo confessar que meu codigo está facil de entendender porém está um pouco desorganizado, ainda me falta conhecimento para ter uma maior otimização do código. A partir de agora (19/11) irei focar mais no back-end e buscar conhecimento de como posso deixar meu codigo mais organizado para que seja melhor interpretado por outro desenvolvedor.
 
-![Aprendendo React 1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/77286b06-e177-4380-b274-778304bd4548)
 
-![Teste no navegador ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/b7fb7723-2d81-4a29-afc9-012c5e7fb73d)
+Nesta gravação de tela, podemos observar o projeto rodando no Expo Go, a maior parte das funcionalidades, não está disponivel ainda, porém já da pra ter uma noção do buscamos com o projeto.
+O video foi gravado em um celular Samsung S22.
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/75f84d9b-29ad-4f58-820f-98de3debd03e
 
-![Inicio Criação Tela Produtos](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/4f272309-e194-45a7-9b9c-3fc55568e720)
 
-![Video aula ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/b416f8c9-9db7-4796-9228-18151442144c)
+Nesta captura de tela, podemos observar algumas funções utilizadas nesta tela do projeto.
+![Print VS ABERTO](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/3052ff25-2eb2-4ff1-bf03-6e749ed0ac9e)
 
-![App rodando](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/6a21e39a-1303-428b-b849-2c676ab86456)
+Aqui podemos ver um pouco da responsividade em dispositivos IOS, já que a resolução da tela não é a mesma em ambos dispositivos, não está perfeito, porém para uma versão inicial, acredito que foi um bom avanço.
+![Foto IOS](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e3-proj-mov-t1-CardAppio/assets/114536934/acd29425-fd38-4879-8e49-ce505cd25b5d)
+
 
 
 
