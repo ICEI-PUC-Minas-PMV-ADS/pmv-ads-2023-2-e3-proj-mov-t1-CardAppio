@@ -26,14 +26,14 @@ const Login = () => {
             onChangeText={onChangeText}
             value={text}
             placeholder="Email"
-            keyboardType="Text"
           />
           <TextInput
             style={styles.input}
             onChangeText={onChangeNumber}
             value={number}
             placeholder="Senha"
-            keyboardType="numeric"
+            textContentType='password'
+            secureTextEntry={true}
           />
 
           <TextInput
@@ -41,7 +41,7 @@ const Login = () => {
             onChangeText={onChangeNumber}
             value={number}
             placeholder="Confirmar senha"
-            keyboardType="numeric"
+            secureTextEntry={true}
           />
         </View>
 

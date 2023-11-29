@@ -2,12 +2,14 @@ import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import { View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native'
 import { Button, TextInput } from 'react-native-paper';
+import { useUser } from '../../context/UserContext';
 
 
 const Cadastro = () => {
   const [text, onChangeText] = useState('');
   const [number, onChangeNumber] = useState('');
 
+  const { setSigned } = useUser();
   const navigation = useNavigation();
 
   return (
@@ -23,14 +25,13 @@ const Cadastro = () => {
             onChangeText={onChangeText}
             value={text}
             placeholder="Email"
-            keyboardType="Text"
           />
           <TextInput
             style={styles.input}
             onChangeText={onChangeNumber}
             value={number}
             placeholder="Senha"
-            keyboardType="numeric"
+            secureTextEntry={true}
           />
         </View>
 
@@ -38,7 +39,7 @@ const Cadastro = () => {
           <Button
             mode="contained"
             style={[styles.button, { backgroundColor: '#931603' }]}
-            onPress={() => Alert.alert('Button with adjusted color pressed')}
+            onPress={() => setSigned(true)}
           > Login </Button>
           <Button
             mode="contained"
