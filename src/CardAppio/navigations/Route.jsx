@@ -1,8 +1,7 @@
 
 import { useUser } from '../context/UserContext';
-
+import Main from '../navigations/Main';
 import Auth from '../navigations/Auth'
-import BottomMenu from '../views/BottomMenu/BottomMenu'
 
 const Route = () => {
     const { signed } = useUser();
@@ -11,7 +10,7 @@ const Route = () => {
         <>
             {
                 signed
-                    ? <BottomMenu />
+                    ? <Main />
                     : <Auth />
             }
         </>

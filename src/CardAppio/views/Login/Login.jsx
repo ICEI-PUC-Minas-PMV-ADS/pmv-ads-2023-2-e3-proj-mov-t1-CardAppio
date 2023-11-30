@@ -1,9 +1,9 @@
 import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
-import { View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native'
-import { Button, TextInput } from 'react-native-paper';
+import { View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard, Alert, Image, TouchableOpacity } from 'react-native'
+import { Button, IconButton, TextInput } from 'react-native-paper';
 import { useUser } from '../../context/UserContext';
-
+import SocialButtons from '../../components/SocialButtons';
 
 const Cadastro = () => {
   const [text, onChangeText] = useState('');
@@ -51,26 +51,10 @@ const Cadastro = () => {
 
         <Text style={{ fontSize: 16, textAlign: 'center', color: 'white', margin: 16 }}> Ou faça login com </Text>
 
-        <View style={styles.socialContainer}>
-          <Button
-            icon={'google'}
-            mode='contained'
-            style={styles.socialButton}
-            color='#fff'
-            onPress={() => Alert.alert('Button with adjusted color pressed')}
-          > Google </Button>
-          <Button
-            mode='contained'
-            icon={'facebook'}
-            style={styles.socialButton}
-            color='#fff'
-            onPress={() => Alert.alert('Button with adjusted color pressed')}
-          > Facebook </Button>
 
-        </View>
-
+        <SocialButtons />
       </View>
-    </TouchableWithoutFeedback>
+    </TouchableWithoutFeedback >
   );
 
 }
@@ -96,22 +80,12 @@ const styles = StyleSheet.create({
     margin: 16,
   },
   buttonContainer: {
-    display: 'flex',
-    alignContent: 'center',
-    justifyContent: 'center',
     marginHorizontal: 20,
   },
   button: {
-    marginBottom: 8,
+    marginBottom: 10,
     marginHorizontal: 16,
     fontWeight: '700',
-  },
-  socialContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-  },
-  socialButton: {
-    backgroundColor: 'white',
   },
 })
 

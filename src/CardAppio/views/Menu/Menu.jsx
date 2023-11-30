@@ -17,7 +17,7 @@ const menuItems = [
 
 const MenuList = () => {
   return (
-    <ScrollView style={{ backgroundColor: COLORS.black }}>
+    <View style={{ flex: 1, backgroundColor: COLORS.black }}>
       <Header>
         <Appbar.Action icon="menu" onPress={() => { }} />
         <Appbar.Content titleStyle={{ fontSize: 24, fontWeight: 'bold' }} title="CardAppio" onPress={() => { }} />
@@ -30,7 +30,7 @@ const MenuList = () => {
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <View style={styles.itemContainer}>
-              <Image source={item.imageURL} style={styles.image} />
+              <Image source={{ uri: item.imageURL }} style={styles.image} />
               <View style={styles.itemDetails}>
                 <Text style={styles.name}>{item.name}</Text>
                 <Text style={styles.description}>{item.description}</Text>
@@ -40,7 +40,7 @@ const MenuList = () => {
           )}
         />
       </Body>
-    </ScrollView>
+    </View>
   );
 };
 

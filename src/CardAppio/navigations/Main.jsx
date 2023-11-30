@@ -1,32 +1,32 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Login from '../views/Login/Login'
-import Cadastro from '../views/Cadastro/Cadastro'
-import telaIncial from '../views/Inicial/Inicial'
+import Home from '../views/Home/Home';
+import Produtos from '../views/Produtos/Produtos';
+import Carrinho from '../views/Carrinho/Carrinho';
 
 const Stack = createNativeStackNavigator();
 
-const Auth = () => {
+const Main = () => {
 
     return (
-        <Stack.Navigator initialRouteName='Inicial'>
+        <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen
-                name='Inicial'
-                component={telaIncial}
+                name='Home'
+                component={Home}
                 options={{
                     header: () => null,
                 }}
             />
             <Stack.Screen
-                name='Login'
-                component={Login}
+                name='Produtos'
+                component={Produtos}
                 options={{
                     header: () => null,
                 }}
             />
             <Stack.Screen
-                name='Cadastro'
-                component={Cadastro}
+                name='Carrinho'
+                component={Carrinho}
                 options={{
                     header: () => null,
                 }}
@@ -35,4 +35,4 @@ const Auth = () => {
     );
 }
 
-export default Auth;
+export default Main;

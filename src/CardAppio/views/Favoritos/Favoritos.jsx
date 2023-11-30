@@ -1,5 +1,5 @@
 import { Appbar } from 'react-native-paper';
-import { ScrollView, StyleSheet, View, } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, View, } from 'react-native';
 
 import Header from '../../components/Header/Header'
 import COLORS from '../../constants/colors';
@@ -8,7 +8,7 @@ import COLORS from '../../constants/colors';
 const Favoritos = () => {
 
     return (
-        <ScrollView style={{ backgroundColor: COLORS.black }}>
+        <SafeAreaView style={styles.container}>
             <Header>
                 <Appbar.Action icon="menu" onPress={() => { }} />
                 <Appbar.Content titleStyle={{ fontSize: 24, fontWeight: 'bold' }} title="Favoritos" onPress={() => { }} />
@@ -18,11 +18,11 @@ const Favoritos = () => {
 
             </View>
 
-        </ ScrollView>
+        </SafeAreaView>
     )
 }
 const styles = StyleSheet.create({
-    body: {
+    container: {
         flex: 1,
         backgroundColor: COLORS.black,
     },

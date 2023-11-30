@@ -1,190 +1,110 @@
-import { Image, StyleSheet, Text, View, TouchableOpacity, } from "react-native";
-import MenuLogotipo from "../../assets/menu.png";
-import UsuarioLogo from "../../assets/user.png";
-import InicioLogo from "../../assets/inicio.png";
-import CardapioLogo from "../../assets/cardapio.png";
-import Carrinhologo from "../../assets/carrinho.png";
-import FavoritoLogo from "../../assets/favorito.png";
+import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, } from "react-native";
+import { Appbar, Button } from "react-native-paper";
+import { useNavigation } from "@react-navigation/native";
+import Header from "../../components/Header/Header";
 
+const Produtos = () => {
+    const navigation = useNavigation();
+    return (
+        <SafeAreaView style={styles.container}>
+            <Header>
+                <Appbar.Action icon="arrow-left" onPress={() => navigation.goBack()} />
+                <Appbar.Content titleStyle={{ fontSize: 24, fontWeight: 'bold' }} title="CardAppio" onPress={() => { }} />
+                <Appbar.Action icon="account" onPress={() => { }} />
+            </Header>
 
-export const Home = () => {
-
-/* Cabeçalho */
-return (
-    <View style={styles.container}>
-        <View style={styles.header}>
-            <TouchableOpacity>
-                <Image source={MenuLogotipo} style={{ width: 32, height: 32, }} />
-            </TouchableOpacity>
-
-                <Text style={styles.cardappio} >CardAppio</Text>
-
-                <TouchableOpacity>
-                    <Image source={UsuarioLogo} style={{ width: 32, height: 32, }} />
-                </TouchableOpacity>
-            </View>
-{/* Cabeçalho */}
-
-{/* Body Up */}
             <View style={styles.body}>
-                    <View style={styles.background}></View>
-                <View style={styles.idtempo}>
-                    <Text style={styles.pedido}>LOREM IPSUM</Text>
-                    <Text style={styles.prazo}>20 - 40min</Text>
+                <View style={styles.image}></View>
+                <View style={styles.produtoInfo}>
+                    <Text style={{
+                        color: "white",
+                        fontWeight: "bold",
+                        fontSize: 24,
+                    }}>
+                        LOREM IPSUM
+                    </Text>
+                    <Text style={{
+                        color: "white",
+                        fontSize: 16,
+                    }}>
+                        20 - 40min
+                    </Text>
+                </View>
+                <View style={{ width: '100%' }}>
+                    <Text style={styles.valor}>R$ 20,00</Text>
+                </View>
+                <View style={{ width: '100%' }}>
+                    <Text style={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit.</Text>
+                    <Text style={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit.</Text>
                 </View>
             </View>
-            <View>
-                <Text style={styles.idpreço}>R$ 20,00</Text>
-                <Text style={styles.txt1}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit.</Text>
-                <Text style={styles.txt2}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit.</Text>
-            </View>
-{/* Body Up */}
 
-{/* Body Low */}
-            <TouchableOpacity>
-                <View style={styles.cartcontainer}>
-                    <Text style={styles.addcart}>ADICIONAR AO CARRINHO</Text>
+            <TouchableOpacity style={styles.addCartButtonContainer}>
+                <View style={{ alignItems: "center", marginTop: 32 }}>
+                    <Button
+                        mode="contained"
+                        color={'#931603'}
+                        style={styles.addCartButton}
+                    >
+                        <Text style={{ fontWeight: 800, fontSize: 16 }}> ADICIONAR AO CARRINHO </Text>
+                    </Button>
                 </View>
             </TouchableOpacity>
-{/* Body Low */}
 
-{/* Rodapé */}
-<View style={styles.footer}>
-                <View style={styles.rodape}>
-                    <TouchableOpacity>
-                        <Image source={InicioLogo} style={{ width: 35, height: 35, }} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image source={CardapioLogo} style={{ width: 35, height: 35, }} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image source={Carrinhologo} style={{ width: 35, height: 35, }} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image source={FavoritoLogo} style={{ width: 35, height: 35, }} />
-                    </TouchableOpacity>
-                </View>
-            </View>
-{/* Rodapé */}
-        </View>
+        </SafeAreaView>
     );
 };
 
+export default Produtos;
 
 const styles = StyleSheet.create({
-/* Pagina */
     container: {
         backgroundColor: "#1b1b1b",
-        alignItems: "center",
-    },
-/* Pagina */
-
-/* Cabeçalho */
-    header: {
-        marginTop: 50,
-        margin: 25,
-        flexDirection: "row",
-        gap: 60,
+        flex: 1,
     },
 
-    cardappio: {
-        fontSize: 30,
-        color: "white",
-        margin: 0,
-        fontWeight: "bold"
-    },
-/* Cabeçalho */
-
-/* Body Up */
     body: {
+        margin: 32,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 
-    background: {
+    image: {
         backgroundColor: "pink",
-        height: 160,
-        width: 320,
+        height: 180,
+        width: 360,
         borderRadius: 10,
     },
 
-    idtempo: {
+    produtoInfo: {
         marginTop: 20,
         flexDirection: "row",
-       alignItems: "center",
-       justifyContent: "space-between",
+        justifyContent: "space-between",
+        alignItems: 'center',
+        width: '100%'
     },
 
-    pedido: {
-        color: "white",
+    valor: {
+        marginTop: 12,
         fontWeight: "bold",
-        fontSize: 25,
-        width: 200,
+        fontSize: 16,
+        color: "white",
     },
 
-    prazo: {
-        marginTop: 11,
+    description: {
         color: "white",
-        width: 80,
-        fontSize: 15,
-    },
-
-    idpreço: {
-        color: "white",
-        margin: 10,
-        fontWeight: "bold",
-        fontSize: 15,
-    },
-
-    txt1: {
-        color: "white",
-        width: 320,
-        margin: 10,
-        alignSelf: "center",
+        marginVertical: 12,
         fontSize: 16,
     },
 
-    txt2: {
-        color: "white",
-        width: 320,
-        alignSelf: "center",
-        fontSize: 16,
-    },
-
-
-/* Body Up */
-
-/* Body Low */
-    cartcontainer: {
-        marginTop: 250,
-        marginBottom: 25,
+    addCartButtonContainer: {
         alignItems: "center",
-        alignSelf: "center",
-        height: 45,
-        width: 320,
-        justifyContent: "center",
-        borderColor: 'white',
-        borderWidth: 1,
-        color: "white",
-        borderColor: 'white',
-        borderWidth: 1,
+        marginTop: 'auto',
+        marginBottom: 64,
+    },
+
+    addCartButton: {
         borderRadius: 10,
-    },
-    addcart: {
-        color: "white",
-        fontSize: 20,
-        fontWeight: "bold",
-    },
-/* Body Low */
-
-/* Rodapé */
-    footer: {
-        paddingBottom: 39,
-    },
-
-    rodape: {
-        marginHorizontal: 20,
-        flexDirection: "row",
-        gap: 60,
-    },
-/* Rodapé */
+        padding: 6,
+    }
 });
-

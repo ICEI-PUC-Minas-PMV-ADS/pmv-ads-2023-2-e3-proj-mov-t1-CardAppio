@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import { View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native'
 import { Button, TextInput } from 'react-native-paper';
+import SocialButtons from '../../components/SocialButtons';
 
 
 const Login = () => {
@@ -61,23 +62,7 @@ const Login = () => {
 
         <Text style={{ fontSize: 16, textAlign: 'center', color: 'white', margin: 16 }}> Ou cadastre-se com </Text>
 
-        <View style={styles.socialContainer}>
-          <Button
-            icon={'google'}
-            mode='contained'
-            style={styles.socialButton}
-            color='#fff'
-            onPress={() => Alert.alert('Button with adjusted color pressed')}
-          > Google </Button>
-          <Button
-            mode='contained'
-            icon={'facebook'}
-            style={styles.socialButton}
-            color='#fff'
-            onPress={() => Alert.alert('Button with adjusted color pressed')}
-          > Facebook </Button>
-
-        </View>
+        <SocialButtons />
 
       </View>
     </TouchableWithoutFeedback>
@@ -115,13 +100,6 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     marginHorizontal: 16,
     fontWeight: '700',
-  },
-  socialContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-  },
-  socialButton: {
-    backgroundColor: 'white',
   },
 })
 

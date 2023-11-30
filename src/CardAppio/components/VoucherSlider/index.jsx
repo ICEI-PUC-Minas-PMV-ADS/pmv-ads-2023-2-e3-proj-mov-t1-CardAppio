@@ -1,8 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import { FlatList, Image, TouchableOpacity, useWindowDimensions } from "react-native";
 
 const Slider = ({ data, paging }) => {
   const { width } = useWindowDimensions();
-
+  const navigation = useNavigation();
   return (
     <FlatList
       data={data}
@@ -17,7 +18,7 @@ const Slider = ({ data, paging }) => {
       scrollEventThrottle={16}
       decelerationRate='fast'
       renderItem={({ item }) => (
-        <TouchableOpacity activeOpacity={1}>
+        <TouchableOpacity activeOpacity={1} onPress={() => navigation.navigate('Produtos')}>
           {paging ? (
             <Image
               key={item.id}
