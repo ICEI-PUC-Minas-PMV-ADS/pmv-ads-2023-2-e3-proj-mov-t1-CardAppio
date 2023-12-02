@@ -1,16 +1,34 @@
 import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import { View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard, Alert, Image, TouchableOpacity } from 'react-native'
-import { Button, IconButton, TextInput } from 'react-native-paper';
+import { Button, TextInput } from 'react-native-paper';
 import { useUser } from '../../context/UserContext';
 import SocialButtons from '../../components/SocialButtons';
+import { login } from '../../services/auth.services';
 
 const Cadastro = () => {
-  const [text, onChangeText] = useState('');
-  const [number, onChangeNumber] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const { setSigned } = useUser();
+  const { setSigned, setName } = useUser();
   const navigation = useNavigation();
+
+  const handleLogin = () => {
+
+    login({
+      email: email,
+      password: password,
+    }).then(res => {
+      if (res && res.user) {
+        setSigned(true);
+        setName(res.user.name);
+      } else {
+        Alert.alert('Atenção!', 'Email/Senha inválidos')
+
+      }
+    });
+
+  }
 
   return (
     <TouchableWithoutFeedback
@@ -22,14 +40,14 @@ const Cadastro = () => {
         <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
-            onChangeText={onChangeText}
-            value={text}
+            onChangeText={setEmail}
+            value={email}
             placeholder="Email"
           />
           <TextInput
             style={styles.input}
-            onChangeText={onChangeNumber}
-            value={number}
+            onChangeText={setPassword}
+            value={password}
             placeholder="Senha"
             secureTextEntry={true}
           />
@@ -39,7 +57,7 @@ const Cadastro = () => {
           <Button
             mode="contained"
             style={[styles.button, { backgroundColor: '#931603' }]}
-            onPress={() => setSigned(true)}
+            onPress={handleLogin}
           > Login </Button>
           <Button
             mode="contained"

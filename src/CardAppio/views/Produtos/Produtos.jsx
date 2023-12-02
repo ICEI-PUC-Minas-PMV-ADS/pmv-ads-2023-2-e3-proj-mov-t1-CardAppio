@@ -39,7 +39,7 @@ const Produtos = () => {
                 </View>
             </View>
 
-            <TouchableOpacity style={styles.addCartButtonContainer}>
+            <TouchableOpacity style={styles.addCartButtonContainer} onPress={() => navigation.navigate('Carrinho')}>
                 <View style={{ alignItems: "center", marginTop: 32 }}>
                     <Button
                         mode="contained"
@@ -49,9 +49,9 @@ const Produtos = () => {
                         <Text style={{ fontWeight: 800, fontSize: 16 }}> ADICIONAR AO CARRINHO </Text>
                     </Button>
                 </View>
-            </TouchableOpacity>
+            </TouchableOpacity >
 
-        </SafeAreaView>
+        </SafeAreaView >
     );
 };
 

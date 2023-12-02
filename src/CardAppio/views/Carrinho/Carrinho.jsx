@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { Image, StyleSheet, Text, View, TouchableOpacity, SafeAreaView, } from "react-native";
-import Header from '../../components/Header/Header';
 import { Appbar, Button, Divider, IconButton } from 'react-native-paper';
+import { useNavigation } from "@react-navigation/native";
+import Header from '../../components/Header/Header';
 
 const Pedidos = () => {
-
     const [number, setNumber] = useState(0)
     const [totalPedido, setTotalPedido] = useState(0)
+    const navigation = useNavigation();
 
     function increment() {
         setNumber(number + 1);
@@ -93,7 +94,7 @@ const Pedidos = () => {
                     </View>
                 </View>
                 <View style={{ width: '100%' }}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                         <Button
                             mode='outlined'
                             color='white'

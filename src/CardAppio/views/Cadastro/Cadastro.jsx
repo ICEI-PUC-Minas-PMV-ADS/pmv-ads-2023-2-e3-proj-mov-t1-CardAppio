@@ -3,11 +3,32 @@ import { useState } from 'react';
 import { View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native'
 import { Button, TextInput } from 'react-native-paper';
 import SocialButtons from '../../components/SocialButtons';
-
+import { register } from '../../services/auth.services';
 
 const Login = () => {
-  const [text, onChangeText] = useState('');
-  const [number, onChangeNumber] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordConfirmation, setPasswordConfirmation] = useState('');
+
+  const handleRegister = () => {
+
+    register({
+      name: name,
+      email: email,
+      password: password,
+    }).then(res => {
+      if (res) {
+        Alert.alert('Atenção!', 'Usuário cadastrado com sucesso!', [
+          { text: "OK", onPress: () => navigation.goBack() }
+        ])
+      } else {
+        Alert.alert('Atenção!', 'Usuário não cadastrado! Tente novamente mais tarde')
+
+      }
+    });
+
+  }
 
   const navigation = useNavigation();
 
@@ -24,14 +45,20 @@ const Login = () => {
         <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
-            onChangeText={onChangeText}
-            value={text}
+            onChangeText={setName}
+            value={name}
+            placeholder="Name"
+          />
+          <TextInput
+            style={styles.input}
+            onChangeText={setEmail}
+            value={email}
             placeholder="Email"
           />
           <TextInput
             style={styles.input}
-            onChangeText={onChangeNumber}
-            value={number}
+            onChangeText={setPassword}
+            value={password}
             placeholder="Senha"
             textContentType='password'
             secureTextEntry={true}
@@ -39,8 +66,8 @@ const Login = () => {
 
           <TextInput
             style={styles.input}
-            onChangeText={onChangeNumber}
-            value={number}
+            onChangeText={setPasswordConfirmation}
+            value={passwordConfirmation}
             placeholder="Confirmar senha"
             secureTextEntry={true}
           />
@@ -50,7 +77,7 @@ const Login = () => {
           <Button
             mode="contained"
             style={[styles.button, { backgroundColor: '#931603' }]}
-            onPress={() => Alert.alert('Button with adjusted color pressed')}
+            onPress={handleRegister}
           > Cadastrar </Button>
           <Button
             mode="contained"
