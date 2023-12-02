@@ -1,1 +1,1 @@
-export const BASE_URL = "https://tall-beers-shave.loca.lt/";
+export const BASE_URL = "https://witty-wasps-sit.loca.lt/";

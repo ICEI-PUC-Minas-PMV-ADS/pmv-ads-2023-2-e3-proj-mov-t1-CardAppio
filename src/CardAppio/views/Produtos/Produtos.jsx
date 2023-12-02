@@ -1,10 +1,29 @@
-import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, Image, } from "react-native";
 import { Appbar, Button } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 import Header from "../../components/Header/Header";
+import { useEffect, useState } from "react";
 
-const Produtos = () => {
+const Produtos = ({ route }) => {
     const navigation = useNavigation();
+    const { item } = route.params ? route.params : {};
+
+    const [nome, setNome] = useState('');
+    const [descricao, setDescricao] = useState('');
+    const [preco, setPreco] = useState('');
+    const [imageURL, setImageURL] = useState('');
+    const [estimativa, setEstimativa] = useState('');
+
+    useEffect(() => {
+        if (item) {
+            setNome(item.nome);
+            setDescricao(item.descricao);
+            setPreco(item.preco);
+            setImageURL(item.imageURL);
+            setEstimativa(item.estimativa);
+        }
+    }, [item]);
+
     return (
         <SafeAreaView style={styles.container}>
             <Header>
@@ -14,28 +33,30 @@ const Produtos = () => {
             </Header>
 
             <View style={styles.body}>
-                <View style={styles.image}></View>
+                <Image
+                    style={styles.image}
+                    source={{ uri: item.imageURL }}
+                />
                 <View style={styles.produtoInfo}>
                     <Text style={{
                         color: "white",
                         fontWeight: "bold",
                         fontSize: 24,
                     }}>
-                        LOREM IPSUM
+                        {item.nome}
                     </Text>
                     <Text style={{
                         color: "white",
                         fontSize: 16,
                     }}>
-                        20 - 40min
+                        {item.estimativa} min
                     </Text>
                 </View>
                 <View style={{ width: '100%' }}>
-                    <Text style={styles.valor}>R$ 20,00</Text>
+                    <Text style={styles.valor}>{item.preco}</Text>
                 </View>
                 <View style={{ width: '100%' }}>
-                    <Text style={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit.</Text>
-                    <Text style={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit.</Text>
+                    <Text style={styles.description}>{item.descricao}</Text>
                 </View>
             </View>
 

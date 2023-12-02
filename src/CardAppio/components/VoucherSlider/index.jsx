@@ -1,9 +1,16 @@
+import React from 'react';
 import { useNavigation } from "@react-navigation/native";
 import { FlatList, Image, TouchableOpacity, useWindowDimensions } from "react-native";
 
 const Slider = ({ data, paging }) => {
   const { width } = useWindowDimensions();
   const navigation = useNavigation();
+
+  // Check if data is undefined or not an array
+  if (!data || !Array.isArray(data)) {
+    return null; // or handle the error in a way that makes sense for your application
+  }
+
   return (
     <FlatList
       data={data}
@@ -18,7 +25,7 @@ const Slider = ({ data, paging }) => {
       scrollEventThrottle={16}
       decelerationRate='fast'
       renderItem={({ item }) => (
-        <TouchableOpacity activeOpacity={1} onPress={() => navigation.navigate('Produtos')}>
+        <TouchableOpacity activeOpacity={1} onPress={() => navigation.navigate(('Produtos'), { item })}>
           {paging ? (
             <Image
               key={item.id}
@@ -29,10 +36,10 @@ const Slider = ({ data, paging }) => {
                 resizeMode: 'contain',
                 borderRadius: 12,
               }}
-              source={{ uri: item.image }}
+              source={{ uri: item.imageURL }}
             />) : (
             <Image
-              source={{ uri: item.image }}
+              source={{ uri: item.imageURL }}
               style={{
                 width: width * 0.8 - 30,
                 height: width / 2.4,
@@ -41,11 +48,10 @@ const Slider = ({ data, paging }) => {
               }}
             />
           )}
-
         </TouchableOpacity>
       )}
     />
-  )
-}
+  );
+};
 
 export default Slider;
