@@ -1,11 +1,11 @@
 import API from './webapi.services';
 import {BASE_URL } from './urls';
 
-export const getItens = async (item) => {
+export const getFavorites = async (item) => {
 
     try{
 
-        return await API.get(`${BASE_URL}/itens`, item).then(
+        return await API.get(`${BASE_URL}/favorites`, item).then(
             response => { 
                 return response.data;
             },
@@ -20,11 +20,12 @@ export const getItens = async (item) => {
         return null;
     }
 }
-export const insertItens = async (item) => {
+
+export const insertFavorites = async (item) => {
 
     try{
 
-        return await API.post(`${BASE_URL}/itens`, item).then(
+        return await API.post(`${BASE_URL}/favorites`, item).then(
             response => { 
                 return response.data;
             },
@@ -39,11 +40,22 @@ export const insertItens = async (item) => {
         return null;
     }
 }
-export const updateItens = async (item) => {
+
+export const getFavoritesItem = async (itemId) => {
+    try {
+        const response = await API.get(`${BASE_URL}/favorites/${itemId}`);
+        return response.data;
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+};
+
+export const updateFavorites = async (item) => {
 
     try{
 
-        return await API.put(`${BASE_URL}/itens/${item.id}`, item).then(
+        return await API.put(`${BASE_URL}/favorites/${item.id}`, item).then(
             response => { 
                 return response.data;
             },
@@ -58,11 +70,12 @@ export const updateItens = async (item) => {
         return null;
     }
 }
-export const deleteItens = async (item) => {
+
+export const deleteFavorites = async (item) => {
 
     try{
 
-        return await API.delete(`${BASE_URL}/itens/${item.id}`).then(
+        return await API.delete(`${BASE_URL}/favorites/${item.id}`).then(
             response => { 
                 return response.data;
             },

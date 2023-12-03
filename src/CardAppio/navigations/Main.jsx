@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../views/Home/Home';
 import Produtos from '../views/Produtos/Produtos';
 import Carrinho from '../views/Carrinho/Carrinho';
+import Favoritos from '../views/Favoritos/Favoritos';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,13 @@ const Main = () => {
             <Stack.Screen
                 name='Carrinho'
                 component={Carrinho}
+                options={{
+                    header: () => null,
+                }}
+            />
+            <Stack.Screen
+                name='Favoritos'
+                component={Favoritos}
                 options={{
                     header: () => null,
                 }}

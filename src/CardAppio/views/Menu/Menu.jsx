@@ -1,4 +1,4 @@
-import { View, FlatList, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { View, FlatList, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 import Header from '../../components/Header/Header';
 import Body from '../../components/Body/Body';
@@ -9,7 +9,7 @@ import { getItens } from '../../services/itens.services';
 import { useNavigation } from '@react-navigation/native';
 
 const MenuList = () => {
-  const [menu, setMenu] = useState("");
+  const [menu, setMenu] = useState([]);
   const navigation = useNavigation();
 
   const fetchData = () => {

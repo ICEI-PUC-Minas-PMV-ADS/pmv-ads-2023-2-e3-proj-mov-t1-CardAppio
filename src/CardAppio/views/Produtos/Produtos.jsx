@@ -4,10 +4,13 @@ import { useNavigation } from "@react-navigation/native";
 import Header from "../../components/Header/Header";
 import { useEffect, useState } from "react";
 import { insertCarrinhoItem, updateCarrinhoItem, getCarrinhoItem } from "../../services/carrinho.services";
+import { getFavoritesItem, insertFavorites, deleteFavorites } from "../../services/favorites.services";
 
 const Produtos = ({ route }) => {
     const navigation = useNavigation();
     const { item } = route.params ? route.params : {};
+
+    const [isInFavorites, setIsInFavorites] = useState(false);
 
     const [id, setId] = useState('');
     const [name, setName] = useState('');
@@ -17,6 +20,15 @@ const Produtos = ({ route }) => {
     const [deliveryTime, setDeliveryTime] = useState('');
     const [category, setCategory] = useState('');
     const [quantity, setQuantity] = useState(0);
+
+    useEffect(() => {
+        checkIfInFavorites();
+    }, []);
+
+    const checkIfInFavorites = async () => {
+        const existingItem = await getFavoritesItem(item.id);
+        setIsInFavorites(existingItem !== null);
+    };
 
     useEffect(() => {
         if (item) {
@@ -42,6 +54,21 @@ const Produtos = ({ route }) => {
         quantity: quantity,
     };
 
+    const handleAddToFavorites = async () => {
+        if (isInFavorites) {
+            // Remover dos favoritos
+            await deleteFavorites(item);
+            navigation.push('Home');
+        } else {
+            // Adicionar aos favoritos
+            await insertFavorites(item);
+            navigation.push('Home');
+        }
+
+        // Alternar o estado
+        setIsInFavorites(!isInFavorites);
+    };
+
     const handleAddToCart = async () => {
         // Verificar se o item já está no carrinho
         const existingItem = await getCarrinhoItem(productObject.id);
@@ -53,12 +80,12 @@ const Produtos = ({ route }) => {
             };
 
             updateCarrinhoItem(updatedItem).then(() => {
-                navigation.navigate('Carrinho');
+                navigation.push('Carrinho');
             });
         } else {
             // Item não existe no carrinho, adicionar novo item
             insertCarrinhoItem(productObject).then(() => {
-                navigation.navigate('Carrinho');
+                navigation.push('Carrinho');
             });
         }
     };
@@ -68,7 +95,11 @@ const Produtos = ({ route }) => {
             <Header>
                 <Appbar.Action icon="arrow-left" onPress={() => navigation.goBack()} />
                 <Appbar.Content titleStyle={{ fontSize: 24, fontWeight: 'bold' }} title="CardAppio" onPress={() => { }} />
-                <Appbar.Action icon="account" onPress={() => { }} />
+                <Appbar.Action
+                    icon={isInFavorites ? 'heart' : 'heart-outline'}
+                    color={isInFavorites ? 'red' : 'white'}
+                    onPress={handleAddToFavorites}
+                />
             </Header>
 
             <View style={styles.body}>
