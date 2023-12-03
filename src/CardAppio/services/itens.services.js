@@ -1,11 +1,11 @@
 import API from './webapi.services';
 import {BASE_URL } from './urls';
 
-export const getItens = async (param) => {
+export const getItens = async (item) => {
 
     try{
 
-        return await API.get(`${BASE_URL}/itens`, param).then(
+        return await API.get(`${BASE_URL}/itens`, item).then(
             response => { 
                 return response.data;
             },
@@ -20,11 +20,11 @@ export const getItens = async (param) => {
         return null;
     }
 }
-export const insertItens = async (param) => {
+export const insertItens = async (item) => {
 
     try{
 
-        return await API.post(`${BASE_URL}/itens`, param).then(
+        return await API.post(`${BASE_URL}/itens`, item).then(
             response => { 
                 return response.data;
             },
@@ -39,11 +39,11 @@ export const insertItens = async (param) => {
         return null;
     }
 }
-export const updateItens = async (param) => {
+export const updateItens = async (item) => {
 
     try{
 
-        return await API.put(`${BASE_URL}/itens/${param.id}`, param).then(
+        return await API.put(`${BASE_URL}/itens/${item._id}`, item).then(
             response => { 
                 return response.data;
             },
@@ -58,11 +58,11 @@ export const updateItens = async (param) => {
         return null;
     }
 }
-export const deleteItens = async () => {
+export const deleteItens = async (item) => {
 
     try{
 
-        return await API.delete(`${BASE_URL}/itens/${id}`).then(
+        return await API.delete(`${BASE_URL}/itens/${item._id}`).then(
             response => { 
                 return response.data;
             },

@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { FlatList, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { FlatList, Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
 export default function Grid({ data }) {
     const navigation = useNavigation();
@@ -18,7 +18,7 @@ export default function Grid({ data }) {
                 >
                     <Image
                         style={styles.gridImage}
-                        source={{ uri: item.imageURL }}
+                        source={{ uri: item.imageurl }}
                     />
                 </TouchableOpacity>
             )}

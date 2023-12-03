@@ -28,7 +28,6 @@ const Slider = ({ data, paging }) => {
         <TouchableOpacity activeOpacity={1} onPress={() => navigation.navigate(('Produtos'), { item })}>
           {paging ? (
             <Image
-              key={item.id}
               style={{
                 width: width * 0.8 - 20,
                 height: width / 2.6,
@@ -36,10 +35,10 @@ const Slider = ({ data, paging }) => {
                 resizeMode: 'contain',
                 borderRadius: 12,
               }}
-              source={{ uri: item.imageURL }}
+              source={{ uri: item.imageurl }}
             />) : (
             <Image
-              source={{ uri: item.imageURL }}
+              source={{ uri: item.imageurl }}
               style={{
                 width: width * 0.8 - 30,
                 height: width / 2.4,

@@ -4,11 +4,10 @@ import { ScrollView } from 'react-native-virtualized-view'
 
 import Header from '../../components/Header/Header'
 import COLORS from '../../constants/colors';
-import Slider from '../../components/VoucherSlider';
+import Slider from '../../components/Slider';
 import CategorySlider from '../../components/CategorySlider';
 import voucherBannerList from '../../assets/VoucherBanner/voucherBannerList';
 
-import { useNavigation } from '@react-navigation/native';
 import { useEffect, useState } from 'react';
 import { getItens } from '../../services/itens.services';
 import Grid from '../../components/Grid';
@@ -21,6 +20,7 @@ const HomePage = () => {
       setItens(dados);
     })
   }, [])
+
   return (
     <ScrollView style={styles.body}>
       <Header>

@@ -1,25 +1,59 @@
-import { useState } from 'react';
-import { Image, StyleSheet, Text, View, TouchableOpacity, SafeAreaView, } from "react-native";
+import { useEffect, useState } from 'react';
+import { Image, StyleSheet, Text, View, TouchableOpacity, SafeAreaView, FlatList, } from "react-native";
 import { Appbar, Button, Divider, IconButton } from 'react-native-paper';
 import { useNavigation } from "@react-navigation/native";
 import Header from '../../components/Header/Header';
+import { deleteCarrinhoItem, getCarrinho, updateCarrinhoItem } from '../../services/carrinho.services';
 
-const Pedidos = () => {
-    const [number, setNumber] = useState(0)
-    const [totalPedido, setTotalPedido] = useState(0)
+const Carrinho = () => {
     const navigation = useNavigation();
+    const [carrinho, setCarrinho] = useState([]);
 
-    function increment() {
-        setNumber(number + 1);
-        setTotalPedido(totalPedido + 20.99);
+    const fetchData = () => {
+        getCarrinho().then((data) => setCarrinho(data));
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, [])
+
+    const handleRemoveItem = (item) => {
+        deleteCarrinhoItem(item).then(() => { setTimeout(fetchData, 2000) });
     }
 
-    function decrease() {
-        if (number > 0) {
-            setNumber(number - 1);
-            setTotalPedido(totalPedido - 20.99);
+    const handleUpdateItem = (item, action) => {
+        let newQuantity = item.quantity;
+
+        if (action === 'decrease') {
+            if (newQuantity === 1) {
+                return;
+            }
+            newQuantity -= 1;
         }
-    }
+        if (action === 'increase') {
+            newQuantity += 1;
+        }
+
+        const newData = { ...item, quantity: newQuantity };
+
+        updateCarrinhoItem(newData).then(() => {
+            fetchData();
+        });
+    };
+
+    const getTotal = () => {
+        let sum = 0;
+
+        for (let item of carrinho || []) {
+            if (item && item.price && item.quantity) {
+                sum += item.price * item.quantity;
+            }
+        }
+
+        return sum;
+    };
+
+    const cartTotal = getTotal();
 
     return (
         <SafeAreaView style={styles.container}>
@@ -30,71 +64,61 @@ const Pedidos = () => {
                 <Appbar.Action icon="account" onPress={() => { }} />
             </Header>
 
-            {/* Body Up */}
             <View style={styles.body}>
-                <View style={{ flexDirection: 'row', }}>
-                    <Image source={{ uri: 'https://i.imgur.com/t7Y4lRJ.jpg' }} style={styles.produtoImg} />
-                    <Text style={{
-                        lineHeight: 35,
-                        paddingLeft: 12,
-                        color: 'white',
-                    }}>
-                        <Text style={{ fontSize: 16, fontWeight: '600' }}>Lorem ipsum dolor sit amet</Text>{'\n'}
-                        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>R$ 20,00</Text>
-                    </Text>
-                    <View style={styles.quantidadeButtons}>
-                        <TouchableOpacity onPress={decrease} >
-                            <IconButton
-                                icon='minus'
-                                color='white'
-                                size={16}
-                                onPress={() => { }}
-                            />
-                        </TouchableOpacity>
-                        <Text style={styles.quantidade}>{number}</Text>
-                        <TouchableOpacity onPress={increment} >
-                            <IconButton
-                                icon='plus'
-                                color='white'
-                                size={16}
-                                onPress={() => { }}
-                            />
-                        </TouchableOpacity>
-                    </View>
-                </View>
+                {carrinho && carrinho.length > 0 ? (
+                    <FlatList
+                        data={carrinho}
+                        keyExtractor={(item) => String(item.id)}
+                        renderItem={({ item }) => (
+                            <>
+                                <View style={{ flexDirection: 'row', }}>
+                                    <TouchableOpacity
+                                        onPress={() => handleRemoveItem(item)}
+                                    >
+                                        <IconButton
+                                            icon='trash-can'
+                                            color='white'
+                                        />
+                                    </TouchableOpacity>
+                                    <Image source={{ uri: item.imageurl }} style={styles.produtoImg} />
+                                    <Text style={{
+                                        lineHeight: 35,
+                                        paddingLeft: 12,
+                                        color: 'white',
+                                    }}>
+                                        <Text style={{ fontSize: 16, fontWeight: '600' }}>{item.name}</Text>{'\n'}
+                                        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>R$ {item.price}</Text>
+                                    </Text>
+                                    <View style={styles.quantidadeButtons}>
+                                        <TouchableOpacity onPress={() => { }} >
+                                            <IconButton
+                                                icon='minus'
+                                                color='white'
+                                                size={16}
+                                                onPress={() => handleUpdateItem(item, 'decrease')}
+                                            />
+                                        </TouchableOpacity>
+                                        <Text style={styles.quantidade}>{item.quantity}</Text>
+                                        <TouchableOpacity onPress={() => { }} >
+                                            <IconButton
+                                                icon='plus'
+                                                color='white'
+                                                size={16}
+                                                onPress={() => handleUpdateItem(item, 'increase')}
+                                            />
+                                        </TouchableOpacity>
+                                    </View>
+                                </View>
+                                <Divider style={styles.divider} />
+                            </>
+                        )}
+                    />
+                ) : (
+                    <Text style={{ color: 'white', fontSize: 18, paddingVertical: 32, fontWeight: 'bold', }}>Carrinho de compras vazio </Text>
+                )}
 
-                <Divider style={styles.divider} />
-
-                <View style={{ flexDirection: 'row', }}>
-                    <Image source={{ uri: 'https://i.imgur.com/t7Y4lRJ.jpg' }} style={styles.produtoImg} />
-                    <Text style={{
-                        lineHeight: 35,
-                        paddingLeft: 12,
-                        color: 'white',
-                    }}>
-                        <Text style={{ fontSize: 16, fontWeight: '600' }}>Lorem ipsum dolor sit amet</Text>{'\n'}
-                        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>R$ 20,00</Text>
-                    </Text>
-                    <View style={styles.quantidadeButtons}>
-                        <TouchableOpacity onPress={decrease} >
-                            <IconButton
-                                icon='minus'
-                                color='white'
-                                size={16}
-                            />
-                        </TouchableOpacity>
-                        <Text style={styles.quantidade}>{number}</Text>
-                        <TouchableOpacity onPress={increment} >
-                            <IconButton
-                                icon='plus'
-                                color='white'
-                                size={16}
-                            />
-                        </TouchableOpacity>
-                    </View>
-                </View>
                 <View style={{ width: '100%' }}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+                    <TouchableOpacity onPress={() => navigation.push('Home')}>
                         <Button
                             mode='outlined'
                             color='white'
@@ -110,7 +134,7 @@ const Pedidos = () => {
                         <Text style={{
                             color: "white",
                             fontSize: 16,
-                            marginBottom: 12,
+                            marginBottom: 16,
                             justifyContent: 'space-between'
                         }}>
                             Total do pedido:
@@ -121,7 +145,7 @@ const Pedidos = () => {
                                 fontWeight: '800',
                             }}
                         >
-                            R$ {totalPedido.toFixed(2)}
+                            R$ {cartTotal.toFixed(2)}
                         </Text>
                     </View>
                     <TouchableOpacity>
@@ -139,7 +163,7 @@ const Pedidos = () => {
     );
 };
 
-export default Pedidos;
+export default Carrinho;
 
 const styles = StyleSheet.create({
     container: {
@@ -156,7 +180,7 @@ const styles = StyleSheet.create({
 
     divider: {
         color: 'white',
-        borderWidth: 0.4,
+        borderWidth: 0.6,
         borderColor: 'white',
         width: '100%',
         marginVertical: 24,
@@ -183,7 +207,7 @@ const styles = StyleSheet.create({
 
     addButton: {
         fontSize: 16,
-        marginTop: 20,
+        marginBottom: 20,
         color: "white",
         borderColor: 'white',
         borderRadius: 10
@@ -192,7 +216,7 @@ const styles = StyleSheet.create({
     totalContainer: {
         width: '100%',
         marginTop: 'auto',
-        marginBottom: 6,
+        marginBottom: 16,
     },
 });
 

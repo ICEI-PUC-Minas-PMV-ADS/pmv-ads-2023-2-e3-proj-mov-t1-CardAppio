@@ -3,26 +3,67 @@ import { Appbar, Button } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 import Header from "../../components/Header/Header";
 import { useEffect, useState } from "react";
+import { insertCarrinhoItem, updateCarrinhoItem, getCarrinhoItem } from "../../services/carrinho.services";
 
 const Produtos = ({ route }) => {
     const navigation = useNavigation();
     const { item } = route.params ? route.params : {};
 
-    const [nome, setNome] = useState('');
-    const [descricao, setDescricao] = useState('');
-    const [preco, setPreco] = useState('');
+    const [id, setId] = useState('');
+    const [name, setName] = useState('');
+    const [description, setDescription] = useState('');
+    const [price, setPrice] = useState('');
     const [imageURL, setImageURL] = useState('');
-    const [estimativa, setEstimativa] = useState('');
+    const [deliveryTime, setDeliveryTime] = useState('');
+    const [category, setCategory] = useState('');
+    const [quantity, setQuantity] = useState(0);
 
     useEffect(() => {
         if (item) {
-            setNome(item.nome);
-            setDescricao(item.descricao);
-            setPreco(item.preco);
-            setImageURL(item.imageURL);
-            setEstimativa(item.estimativa);
+            setId(item.id)
+            setName(item.name);
+            setDescription(item.description);
+            setCategory(item.category);
+            setPrice(item.price);
+            setImageURL(item.imageurl);
+            setDeliveryTime(item.deliverytime);
+            setQuantity(item.quantity);
         }
     }, [item]);
+
+
+    const productObject = {
+        id: id,
+        name: name,
+        category: category,
+        description: description,
+        price: price,
+        imageurl: imageURL,
+        deliverytime: deliveryTime,
+        quantity: quantity,
+    };
+
+    const handleAddToCart = async () => {
+        // Verificar se o item já está no carrinho
+        const existingItem = await getCarrinhoItem(productObject.id);
+
+        if (existingItem) {
+            // Item já existe no carrinho, aumentar a quantidade
+            const updatedItem = {
+                ...existingItem,
+                quantity: existingItem.quantity + 1,
+            };
+
+            updateCarrinhoItem(updatedItem).then(() => {
+                navigation.navigate('Carrinho');
+            });
+        } else {
+            // Item não existe no carrinho, adicionar novo item
+            insertCarrinhoItem(productObject).then(() => {
+                navigation.navigate('Carrinho');
+            });
+        }
+    };
 
     return (
         <SafeAreaView style={styles.container}>
@@ -35,7 +76,7 @@ const Produtos = ({ route }) => {
             <View style={styles.body}>
                 <Image
                     style={styles.image}
-                    source={{ uri: item.imageURL }}
+                    source={{ uri: item.imageurl }}
                 />
                 <View style={styles.produtoInfo}>
                     <Text style={{
@@ -43,29 +84,32 @@ const Produtos = ({ route }) => {
                         fontWeight: "bold",
                         fontSize: 24,
                     }}>
-                        {item.nome}
+                        {item.name}
                     </Text>
                     <Text style={{
                         color: "white",
                         fontSize: 16,
                     }}>
-                        {item.estimativa} min
+                        {item.deliverytime} min
                     </Text>
                 </View>
                 <View style={{ width: '100%' }}>
-                    <Text style={styles.valor}>{item.preco}</Text>
+                    <Text style={styles.valor}>{item.price}</Text>
                 </View>
                 <View style={{ width: '100%' }}>
-                    <Text style={styles.description}>{item.descricao}</Text>
+                    <Text style={styles.description}>{item.description}</Text>
                 </View>
             </View>
 
-            <TouchableOpacity style={styles.addCartButtonContainer} onPress={() => navigation.navigate('Carrinho')}>
+            <TouchableOpacity
+                style={styles.addCartButtonContainer}
+            >
                 <View style={{ alignItems: "center", marginTop: 32 }}>
                     <Button
                         mode="contained"
                         color={'#931603'}
                         style={styles.addCartButton}
+                        onPress={handleAddToCart}
                     >
                         <Text style={{ fontWeight: 800, fontSize: 16 }}> ADICIONAR AO CARRINHO </Text>
                     </Button>
