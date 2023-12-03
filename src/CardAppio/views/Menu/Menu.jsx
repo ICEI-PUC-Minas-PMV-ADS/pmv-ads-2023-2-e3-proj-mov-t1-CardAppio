@@ -1,21 +1,25 @@
-import { View, FlatList, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, FlatList, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
 
 import Header from '../../components/Header/Header';
 import Body from '../../components/Body/Body';
-import { Appbar, Text } from 'react-native-paper';
+import { Appbar, Divider, Text } from 'react-native-paper';
 import COLORS from '../../constants/colors';
-
-const menuItems = [
-  {
-    id: '1',
-    name: 'Item 1',
-    description: 'Uma breve descrição do Item 1',
-    price: 'R$ 10.99',
-    imageURL: 'https://img.freepik.com/fotos-gratis/hamburguer-isolado-no-fundo-branco-fastfood-de-hamburguer-fresco-com-carne-e-queijo_90220-1329.jpg'
-  },
-];
+import { useEffect, useState } from 'react';
+import { getItens } from '../../services/itens.services';
+import { useNavigation } from '@react-navigation/native';
 
 const MenuList = () => {
+  const [menu, setMenu] = useState("");
+  const navigation = useNavigation();
+
+  const fetchData = () => {
+    getItens().then((data) => setMenu(data));
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [])
+
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.black }}>
       <Header>
@@ -26,17 +30,20 @@ const MenuList = () => {
 
       <Body>
         <FlatList
-          data={menuItems}
+          data={menu}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <View style={styles.itemContainer}>
-              <Image source={{ uri: item.imageURL }} style={styles.image} />
-              <View style={styles.itemDetails}>
-                <Text style={styles.name}>{item.name}</Text>
-                <Text style={styles.description}>{item.description}</Text>
-                <Text style={styles.price}>{item.price}</Text>
+            <TouchableOpacity onPress={() => navigation.navigate(('Produtos'), { item })}>
+              <View style={styles.itemContainer}>
+                <Image source={{ uri: item.imageurl }} style={styles.image} />
+                <View style={styles.itemDetails}>
+                  <Text style={styles.name}>{item.name}</Text>
+                  <Text style={styles.description}>{item.description}</Text>
+                  <Text style={styles.price}>R$ {item.price}</Text>
+                </View>
               </View>
-            </View>
+              <Divider style={styles.divider} />
+            </ TouchableOpacity>
           )}
         />
       </Body>
@@ -47,9 +54,8 @@ const MenuList = () => {
 const styles = StyleSheet.create({
   itemContainer: {
     flexDirection: 'row',
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
     padding: 10,
+    alignItems: 'center'
   },
   Container: {
     flex: 1,
@@ -57,10 +63,16 @@ const styles = StyleSheet.create({
   image: {
     width: 50,
     height: 50,
-    marginRight: 10,
+  },
+  divider: {
+    color: 'white',
+    borderWidth: 0.6,
+    borderColor: 'white',
+    width: '100%',
+    marginVertical: 12,
   },
   itemDetails: {
-    flex: 1,
+    marginLeft: 20,
   },
   name: {
     fontSize: 18,
@@ -68,13 +80,14 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   description: {
-    color: 'white',
+    color: "#909090",
     fontSize: 14,
   },
   price: {
     fontSize: 16,
-    marginTop: 5,
+    marginTop: 6,
     color: 'green',
+    fontWeight: 'bold',
   },
 });
 

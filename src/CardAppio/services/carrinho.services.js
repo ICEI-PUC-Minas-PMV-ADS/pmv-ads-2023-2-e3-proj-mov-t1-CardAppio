@@ -23,7 +23,6 @@ export const getCarrinhoItem = async (itemId) => {
 
 export const insertCarrinhoItem = async (item) => {
   try {
-    delete item._id;
     const response = await API.post(`${BASE_URL}/carrinho`, item);
     return response.data;
   } catch (error) {

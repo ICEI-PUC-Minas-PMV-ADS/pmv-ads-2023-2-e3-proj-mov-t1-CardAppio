@@ -31,7 +31,6 @@ const Produtos = ({ route }) => {
         }
     }, [item]);
 
-
     const productObject = {
         id: id,
         name: name,
@@ -46,7 +45,6 @@ const Produtos = ({ route }) => {
     const handleAddToCart = async () => {
         // Verificar se o item já está no carrinho
         const existingItem = await getCarrinhoItem(productObject.id);
-
         if (existingItem) {
             // Item já existe no carrinho, aumentar a quantidade
             const updatedItem = {
@@ -90,7 +88,7 @@ const Produtos = ({ route }) => {
                         color: "white",
                         fontSize: 16,
                     }}>
-                        {item.deliverytime} min
+                        {item.deliveryTime} min
                     </Text>
                 </View>
                 <View style={{ width: '100%' }}>
