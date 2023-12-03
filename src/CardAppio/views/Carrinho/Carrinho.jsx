@@ -3,7 +3,8 @@ import { Image, StyleSheet, Text, View, TouchableOpacity, SafeAreaView, FlatList
 import { Appbar, Button, Divider, IconButton } from 'react-native-paper';
 import { useNavigation } from "@react-navigation/native";
 import Header from '../../components/Header/Header';
-import { deleteCarrinhoItem, getCarrinho, updateCarrinhoItem } from '../../services/carrinho.services';
+import { deleteCarrinhoItem, getCarrinho, limparCarrinho, updateCarrinhoItem } from '../../services/carrinho.services';
+import { insertPedidos } from '../../services/pedido.services';
 
 const Carrinho = () => {
     const navigation = useNavigation();
@@ -54,6 +55,19 @@ const Carrinho = () => {
     };
 
     const cartTotal = getTotal();
+
+    const orderObject = {
+        numeroPedido: Math.floor(Math.random() * 1000) + 1,
+        produtos: carrinho,
+        statusPedido: 'Em processamento',
+        total: cartTotal,
+    };
+
+    const handleConfirmarPedido = () => {
+        if (carrinho.length > 0) {
+            insertPedidos(orderObject).then(() => navigation.navigate('Pedidos', { item: orderObject }))
+        }
+    };
 
     return (
         <SafeAreaView style={styles.container}>
@@ -114,7 +128,7 @@ const Carrinho = () => {
                         )}
                     />
                 ) : (
-                    <Text style={{ color: 'white', fontSize: 18, paddingVertical: 32, fontWeight: 'bold', }}>Carrinho de compras vazio </Text>
+                    <Text style={{ color: 'white', fontSize: 18, paddingVertical: 32, fontWeight: 'bold', }}> Carrinho de compras vazio </Text>
                 )}
 
                 <View style={{ width: '100%' }}>
@@ -148,13 +162,13 @@ const Carrinho = () => {
                             R$ {cartTotal.toFixed(2)}
                         </Text>
                     </View>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={handleConfirmarPedido}>
                         <Button
                             mode='contained'
                             color={'#931603'}
                             style={{ borderRadius: 10, padding: 6 }}
                         >
-                            <Text style={{ fontSize: 16, fontWeight: 800 }}> Confirmar</Text>
+                            <Text style={{ fontSize: 16, fontWeight: 800 }}> Confirmar Pedido </Text>
                         </Button>
                     </TouchableOpacity>
                 </View>
