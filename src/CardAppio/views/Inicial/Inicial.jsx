@@ -13,9 +13,16 @@ const Inicial = () => {
       <Button
         mode="contained"
         style={[styles.button, { backgroundColor: '#931603' }]}
+        onPress={() => navigation.navigate('Customer')}
+      >
+        Fazer Pedido
+      </Button>
+      <Button
+        mode="contained"
+        style={[styles.button, { backgroundColor: '#F5CE69' }]}
         onPress={() => navigation.navigate('Login')}
       >
-        Login
+        <Text style={{ color: 'black' }}> Login </Text>
       </Button>
 
       <Button

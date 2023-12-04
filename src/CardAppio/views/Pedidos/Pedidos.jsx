@@ -1,14 +1,17 @@
-import { FlatList, Image, SafeAreaView, StyleSheet, TouchableOpacity, View } from "react-native";
+import { FlatList, SafeAreaView, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Appbar, Divider, Text } from "react-native-paper";
 import Header from "../../components/Header/Header";
 import Body from "../../components/Body/Body";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getPedidos } from '../../services/pedido.services';
 import { useNavigation } from "@react-navigation/native";
+import { CustomerContext } from "../../context/CustomerContext";
 
 const Pedidos = () => {
     const [pedidos, setPedidos] = useState([]);
     const navigation = useNavigation();
+
+    const { name, table } = useContext(CustomerContext)
 
     const fetchData = () => {
         getPedidos().then((data) => setPedidos(data));
@@ -35,6 +38,7 @@ const Pedidos = () => {
                             <View style={styles.itemContainer}>
                                 <View style={styles.itemDetails}>
                                     <Text style={styles.name}>Pedido Nº: {item.numeroPedido}</Text>
+                                    <Text style={[styles.description, { color: 'green' }]}>Cliente: {name} - Mesa: {table} </Text>
                                     <Text style={styles.description}>{item.statusPedido}</Text>
                                 </View>
                             </View>

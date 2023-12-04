@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react';
-import { Image, StyleSheet, Text, View, TouchableOpacity, SafeAreaView, FlatList, } from "react-native";
+import { useContext, useEffect, useState } from 'react';
+import { Image, StyleSheet, Text, View, TouchableOpacity, SafeAreaView, FlatList, Alert, } from "react-native";
 import { Appbar, Button, Divider, IconButton } from 'react-native-paper';
 import { useNavigation } from "@react-navigation/native";
 import Header from '../../components/Header/Header';
-import { deleteCarrinhoItem, getCarrinho, limparCarrinho, updateCarrinhoItem } from '../../services/carrinho.services';
+import { deleteCarrinhoItem, getCarrinho, updateCarrinhoItem } from '../../services/carrinho.services';
 import { insertPedidos } from '../../services/pedido.services';
+import { CustomerContext } from '../../context/CustomerContext';
 
 const Carrinho = () => {
     const navigation = useNavigation();
+    const { name, table } = useContext(CustomerContext);
     const [carrinho, setCarrinho] = useState([]);
 
     const fetchData = () => {
@@ -19,7 +21,21 @@ const Carrinho = () => {
     }, [])
 
     const handleRemoveItem = (item) => {
-        deleteCarrinhoItem(item).then(() => { setTimeout(fetchData, 2000) });
+        Alert.alert(
+            "Remover produto",
+            `Deseja remover o ${item.name} do carrinho?`,
+            [
+                {
+                    text: "Cancelar",
+                    style: "cancel",
+                },
+                {
+                    text: "Remover",
+                    onPress: () =>
+                        deleteCarrinhoItem(item).then(() => setTimeout(fetchData, 2000)),
+                },
+            ]
+        );
     }
 
     const handleUpdateItem = (item, action) => {
@@ -61,6 +77,8 @@ const Carrinho = () => {
         produtos: carrinho,
         statusPedido: 'Em processamento',
         total: cartTotal,
+        name: name,
+        table: table,
     };
 
     const handleConfirmarPedido = () => {

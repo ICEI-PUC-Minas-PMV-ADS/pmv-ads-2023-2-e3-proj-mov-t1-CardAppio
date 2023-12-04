@@ -2,12 +2,14 @@ import { FlatList, Image, SafeAreaView, StyleSheet, TouchableOpacity, View } fro
 import { Appbar, Divider, Text } from "react-native-paper";
 import Header from "../../components/Header/Header";
 import Body from "../../components/Body/Body";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import { CustomerContext } from "../../context/CustomerContext";
 
 const Pedido = ({ route }) => {
     const [numeroPedido, setNumeroPedido] = useState('');
     const [statusPedido, setStatusPedido] = useState('');
+    const { name, table } = useContext(CustomerContext);
     const [total, setTotal] = useState('');
     const [produtos, setProdutos] = useState([]);
     const { item } = route.params ? route.params : {};
@@ -34,7 +36,8 @@ const Pedido = ({ route }) => {
 
             <Body>
                 <View>
-                    <Text style={[styles.name, { backgroundColor: '#931603' }]}> Pedido Nº: {numeroPedido} - {statusPedido}  </Text>
+                    <Text style={[styles.name, { backgroundColor: '#931603', marginBottom: 8 }]}> Pedido Nº: {numeroPedido} - {statusPedido}  </Text>
+                    <Text style={styles.name}> Cliente: {name} - Mesa: {table} </Text>
                 </View>
                 <FlatList
                     data={produtos}

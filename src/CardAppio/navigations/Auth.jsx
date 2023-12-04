@@ -3,35 +3,43 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from '../views/Login/Login'
 import Cadastro from '../views/Cadastro/Cadastro'
 import telaIncial from '../views/Inicial/Inicial'
+import Customer from '../views/Cadastro/Customer';
 
-const Stack = createNativeStackNavigator();
+const { Navigator, Screen } = createNativeStackNavigator();
 
 const Auth = () => {
 
     return (
-        <Stack.Navigator initialRouteName='Inicial'>
-            <Stack.Screen
+        <Navigator initialRouteName='Inicial'>
+            <Screen
                 name='Inicial'
                 component={telaIncial}
                 options={{
                     header: () => null,
                 }}
             />
-            <Stack.Screen
+            <Screen
+                name='Customer'
+                component={Customer}
+                options={{
+                    header: () => null,
+                }}
+            />
+            <Screen
                 name='Login'
                 component={Login}
                 options={{
                     header: () => null,
                 }}
             />
-            <Stack.Screen
+            <Screen
                 name='Cadastro'
                 component={Cadastro}
                 options={{
                     header: () => null,
                 }}
             />
-        </Stack.Navigator>
+        </Navigator>
     );
 }
 

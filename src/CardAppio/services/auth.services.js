@@ -23,7 +23,6 @@ export const register = async (param) => {
 export const login = async (param) => {
 
     try{
-
         return await API.post(`${BASE_URL}/login`, param).then(
             response => { 
                 return response.data;
