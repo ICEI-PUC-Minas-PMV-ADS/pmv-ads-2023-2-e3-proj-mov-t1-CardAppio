@@ -1,1 +1,1 @@
-export const BASE_URL = "https://nine-falcons-enter.loca.lt/";
+export const BASE_URL = "https://json-server-cardappio.vercel.app/";
