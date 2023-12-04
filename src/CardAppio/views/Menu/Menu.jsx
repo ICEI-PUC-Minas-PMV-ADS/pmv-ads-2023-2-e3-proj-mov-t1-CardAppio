@@ -6,11 +6,12 @@ import { Appbar, Divider, Text } from 'react-native-paper';
 import COLORS from '../../constants/colors';
 import { useEffect, useState } from 'react';
 import { getItens } from '../../services/itens.services';
-import { useNavigation } from '@react-navigation/native';
+import { useIsFocused, useNavigation } from '@react-navigation/native';
 
 const MenuList = () => {
   const [menu, setMenu] = useState([]);
   const navigation = useNavigation();
+  const isFocused = useIsFocused();
 
   const fetchData = () => {
     getItens().then((data) => setMenu(data));
@@ -18,7 +19,7 @@ const MenuList = () => {
 
   useEffect(() => {
     fetchData();
-  }, [])
+  }, [isFocused])
 
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.black }}>

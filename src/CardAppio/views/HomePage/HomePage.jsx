@@ -11,15 +11,17 @@ import voucherBannerList from '../../assets/VoucherBanner/voucherBannerList';
 import { useEffect, useState } from 'react';
 import { getItens } from '../../services/itens.services';
 import Grid from '../../components/Grid';
+import { useIsFocused } from '@react-navigation/native';
 
 const HomePage = () => {
   const [itens, setItens] = useState();
+  const isFocused = useIsFocused();
 
   useEffect(() => {
     getItens().then(dados => {
       setItens(dados);
     })
-  }, [])
+  }, [isFocused])
 
   return (
     <ScrollView style={styles.body}>

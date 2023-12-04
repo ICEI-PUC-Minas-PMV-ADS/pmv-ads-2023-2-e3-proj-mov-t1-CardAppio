@@ -6,12 +6,13 @@ import { Appbar, Divider, Text } from 'react-native-paper';
 import COLORS from '../../constants/colors';
 import { useEffect, useState } from 'react';
 import { getFavorites } from '../../services/favorites.services';
-import { useNavigation } from '@react-navigation/native';
+import { useIsFocused, useNavigation } from '@react-navigation/native';
 
 
 const Favoritos = () => {
     const [favorites, setFavorites] = useState([]);
     const navigation = useNavigation();
+    const isFocused = useIsFocused();
 
     const fetchData = () => {
         getFavorites().then((data) => setFavorites(data));
@@ -19,7 +20,7 @@ const Favoritos = () => {
 
     useEffect(() => {
         fetchData();
-    }, [])
+    }, [isFocused])
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.black }}>

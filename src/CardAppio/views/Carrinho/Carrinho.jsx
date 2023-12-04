@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { Image, StyleSheet, Text, View, TouchableOpacity, SafeAreaView, FlatList, Alert, } from "react-native";
 import { Appbar, Button, Divider, IconButton } from 'react-native-paper';
-import { useNavigation } from "@react-navigation/native";
+import { useIsFocused, useNavigation } from "@react-navigation/native";
 import Header from '../../components/Header/Header';
 import { deleteCarrinhoItem, getCarrinho, updateCarrinhoItem } from '../../services/carrinho.services';
 import { insertPedidos } from '../../services/pedido.services';
@@ -11,6 +11,7 @@ const Carrinho = () => {
     const navigation = useNavigation();
     const { name, table } = useContext(CustomerContext);
     const [carrinho, setCarrinho] = useState([]);
+    const isFocused = useIsFocused();
 
     const fetchData = () => {
         getCarrinho().then((data) => setCarrinho(data));
@@ -18,7 +19,7 @@ const Carrinho = () => {
 
     useEffect(() => {
         fetchData();
-    }, [])
+    }, [isFocused])
 
     const handleRemoveItem = (item) => {
         Alert.alert(

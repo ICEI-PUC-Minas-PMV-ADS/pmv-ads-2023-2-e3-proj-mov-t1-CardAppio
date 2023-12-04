@@ -4,12 +4,13 @@ import Header from "../../components/Header/Header";
 import Body from "../../components/Body/Body";
 import { useContext, useEffect, useState } from "react";
 import { getPedidos } from '../../services/pedido.services';
-import { useNavigation } from "@react-navigation/native";
+import { useIsFocused, useNavigation } from "@react-navigation/native";
 import { CustomerContext } from "../../context/CustomerContext";
 
 const Pedidos = () => {
     const [pedidos, setPedidos] = useState([]);
     const navigation = useNavigation();
+    const isFocused = useIsFocused();
 
     const { name, table } = useContext(CustomerContext)
 
@@ -19,7 +20,7 @@ const Pedidos = () => {
 
     useEffect(() => {
         fetchData();
-    }, [])
+    }, [isFocused])
 
     return (
         <SafeAreaView style={styles.container}>
