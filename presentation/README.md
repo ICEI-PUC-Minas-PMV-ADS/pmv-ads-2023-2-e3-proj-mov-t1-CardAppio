@@ -1,4 +1,4 @@
 # Apresentação da Solução
 
 Vídeo de apresentação do app: https://vimeo.com/891286545?share=copy
-Considerações Finais: ![Considerações Finais](img/Considerações Finais.docx)
+Considerações Finais: Considerações Finais
